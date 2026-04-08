@@ -84,7 +84,7 @@
             <div class="collection-grid">
                 <div class="collection-card" data-series="edita">
                     <div class="collection-image">
-                        <img src="image/Edita/edita-blush-pink.png" alt="Edita Series">
+                        <img src="image/Edita/edita blush pink.png" alt="Edita Series">
                     </div>
                     <div class="collection-info">
                         <h3>Edita Series</h3>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="collection-card" data-series="calla">
                     <div class="collection-image">
-                        <img src="image/calla/calla-ice-blue.png" alt="Calla Series">
+                        <img src="image/calla/calla ice blue.png" alt="Calla Series">
                     </div>
                     <div class="collection-info">
                         <h3>Calla Series</h3>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="collection-card" data-series="shreya">
                     <div class="collection-image">
-                        <img src="image/shreya/shreya-burgundy.png" alt="Shreya Series">
+                        <img src="image/shreya/shreya burgundy.png" alt="Shreya Series">
                     </div>
                     <div class="collection-info">
                         <h3>Shreya Series</h3>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="collection-card" data-series="aurora">
                     <div class="collection-image">
-                        <img src="image/aurora/aurora-mahogany.png" alt="Aurora Series">
+                        <img src="image/aurora/Mahogany.png" alt="Aurora Series">
                     </div>
                     <div class="collection-info">
                         <h3>Aurora Series</h3>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="collection-card" data-series="elysian">
                     <div class="collection-image">
-                        <img src="image/elysian/elysian-denim.png" alt="Elysian Series">
+                        <img src="image/elysian/elysian denim.png" alt="Elysian Series">
                     </div>
                     <div class="collection-info">
                         <h3>Elysian Series</h3>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="collection-card" data-series="alanya">
                     <div class="collection-image">
-                        <img src="image/alanya/alanya-butter-yellow.png" alt="Alanya Series">
+                        <img src="image/alanya/alanya butter yellow.png" alt="Alanya Series">
                     </div>
                     <div class="collection-info">
                         <h3>Alanya Series</h3>
@@ -154,7 +154,7 @@
                 <div class="color-catalog">
                     <div class="color-grid">
                         <div class="color-item" data-color="creamy-nude">
-                            <img src="image/Edita/edita-creamy-nude.png">
+                            <img src="image/Edita/edita creamy nude.png">
                             <div class="color-info">
                                 <h4>Creamy Nude</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="blush-pink">
-                            <img src="image/Edita/edita-blush-pink.png">
+                            <img src="image/Edita/edita blush pink.png">
                             <div class="color-info">
                                 <h4>Blush Pink</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="nude-pink">
-                            <img src="image/Edita/edita-nude-pink.png">
+                            <img src="image/Edita/edita nude pink.png">
                             <div class="color-info">
                                 <h4>Nude Pink</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -184,7 +184,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="navy">
-                            <img src="image/Edita/edita-navy.png">
+                            <img src="image/Edita/edita navy.png">
                             <div class="color-info">
                                 <h4>Navy</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -210,7 +210,7 @@
                 <div class="color-catalog">
                     <div class="color-grid">
                         <div class="color-item" data-color="caramel">
-                            <img src="image/calla/calla-caramel.png">
+                            <img src="image/calla/calla_caramel.png">
                             <div class="color-info">
                                 <h4>Caramel</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -220,7 +220,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="grey">
-                            <img src="image/calla/calla-grey.png">
+                            <img src="image/calla/calla grey.png">
                             <div class="color-info">
                                 <h4>Grey</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="ice-blue">
-                            <img src="image/calla/calla-ice-blue.png">
+                            <img src="image/calla/calla ice blue.png">
                             <div class="color-info">
                                 <h4>Ice Blue</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -241,7 +241,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="maroon">
-                            <img src="image/calla/calla-maroon.png">
+                            <img src="image/calla/calla maroon.png">
                             <div class="color-info">
                                 <h4>Maroon</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -267,7 +267,7 @@
                 <div class="color-catalog">
                     <div class="color-grid">
                         <div class="color-item" data-color="burgundy">
-                            <img src="image/shreya/shreya-burgundy.png">
+                            <img src="image/shreya/shreya burgundy.png">
                             <div class="color-info">
                                 <h4>Burgundy</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -277,7 +277,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="ice-blue-shreya">
-                            <img src="image/shreya/shreya-ice-blue.png">
+                            <img src="image/shreya/shreya ice blue.png">
                             <div class="color-info">
                                 <h4>Ice Blue</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -304,7 +304,7 @@
                 <div class="color-catalog">
                     <div class="color-grid color-grid-single">
                         <div class="color-item" data-color="mahogany">
-                            <img src="image/aurora/aurora-mahogany.png">
+                            <img src="image/aurora/Mahogany.png">
                             <div class="color-info">
                                 <h4>Mahogany</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -330,7 +330,7 @@
                 <div class="color-catalog">
                     <div class="color-grid">
                         <div class="color-item" data-color="baby-pink">
-                            <img src="image/elysian/elysian-baby-pink.png" alt="Baby Pink">
+                            <img src="image/elysian/elysian baby pink.png" alt="Baby Pink">
                             <div class="color-info">
                                 <h4>Baby Pink</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -340,7 +340,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="blue-denim">
-                            <img src="image/elysian/elysian-denim.png">
+                            <img src="image/elysian/elysian denim.png">
                             <div class="color-info">
                                 <h4>Blue Denim</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -350,7 +350,7 @@
                             </div>
                         </div>
                            <div class="color-item" data-color="blue-denim">
-                            <img src="image/Edita/edita-mauve.png">
+                            <img src="image/Edita/edita mauve.png">
                             <div class="color-info">
                                 <h4>Mauve</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -375,7 +375,7 @@
                 <div class="color-catalog">
                     <div class="color-grid">
                         <div class="color-item" data-color="blush-pink-alanya">
-                            <img src="image/alanya/alanya-blush-pink.png">
+                            <img src="image/alanya/alanya blush pink.png">
                             <div class="color-info">
                                 <h4>Blush Pink</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -385,7 +385,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="butter-yellow">
-                            <img src="image/alanya/alanya-butter-yellow.png">
+                            <img src="image/alanya/alanya butter yellow.png">
                             <div class="color-info">
                                 <h4>Butter Yellow</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
@@ -395,7 +395,7 @@
                             </div>
                         </div>
                         <div class="color-item" data-color="creamy-nude-alanya">
-                            <img src="image/alanya/alanya-creamy-nude.png">
+                            <img src="image/alanya/alanya creamy nude.png">
                             <div class="color-info">
                                 <h4>Creamy Nude</h4>
                                 <a href="https://calendar.google.com/calendar/r?cid=https://calendar.google.com/calendar/b/1?cid=attirebynauli@gmail.com" class="check-availability-btn" target="_blank">
