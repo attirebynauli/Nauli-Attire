@@ -566,9 +566,14 @@ ul {
     transition: var(--transition-fast);
 }
 
-.color-item:hover img {
+color-item:hover .color-price {
+    background: linear-gradient(45deg, var(--color-accent), var(--color-accent-light));
+    color: var(--color-bg-primary) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 10px 25px rgba(201, 169, 110, 0.4),
+        0 0 30px rgba(201, 169, 110, 0.3);
     border-color: var(--color-accent);
-    transform: scale(1.02);
 }
 
 .color-info {
@@ -583,9 +588,20 @@ ul {
 }
 
 .color-price {
-    font-size: 0.9rem;
-    color: var(--color-accent);
-    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-accent) !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    background: rgba(201, 169, 110, 0.1);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.1);
 }
 
 .color-info p {
