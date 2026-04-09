@@ -566,7 +566,7 @@ ul {
     transition: var(--transition-fast);
 }
 
-color-item:hover .color-price {
+.color-item:hover .color-price {
     background: linear-gradient(45deg, var(--color-accent), var(--color-accent-light));
     color: var(--color-bg-primary) !important;
     transform: translateY(-3px) scale(1.05);
