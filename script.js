@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSeriesScroll();
     initParallaxEffect();
     initColorHover();
+    initColorModal();
 });
 
 /**
@@ -108,6 +109,13 @@ function initSmoothScroll() {
 
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            // Skip if it's a modal button or calendar link
+            if (href.startsWith('https://calendar') || href.startsWith('https://wa.me')) {
+                return;
+            }
+
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
@@ -181,14 +189,88 @@ function initColorHover() {
         const swatch = item.querySelector('.color-swatch');
 
         item.addEventListener('mouseenter', () => {
-            const color = swatch.style.backgroundColor;
-            // Add subtle glow effect
-            swatch.style.boxShadow = `0 4px 20px ${color}40`;
+            if (swatch) {
+                const color = swatch.style.backgroundColor;
+                // Add subtle glow effect
+                swatch.style.boxShadow = `0 4px 20px ${color}40`;
+            }
         });
 
         item.addEventListener('mouseleave', () => {
-            swatch.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+            if (swatch) {
+                swatch.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+            }
         });
+    });
+}
+
+/**
+ * Color Modal Module
+ * Handles modal popup for color item details
+ */
+function initColorModal() {
+    const modal = document.getElementById('colorModal');
+    const modalClose = document.getElementById('modalClose');
+    const colorItems = document.querySelectorAll('.color-item');
+
+    // Modal elements
+    const modalImage = document.getElementById('modalImage');
+    const modalSeries = document.getElementById('modalSeries');
+    const modalColorName = document.getElementById('modalColorName');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalPackageList = document.getElementById('modalPackageList');
+
+    // Open modal when clicking color item
+    colorItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const series = item.dataset.series || '';
+            const colorName = item.dataset.colorName || '';
+            const price = item.dataset.price || '';
+            const packageItems = item.dataset.package || '';
+            const image = item.dataset.image || '';
+
+            // Set modal content
+            modalImage.src = image;
+            modalImage.alt = colorName;
+            modalSeries.textContent = series;
+            modalColorName.textContent = colorName;
+            modalPrice.textContent = price;
+
+            // Parse and display package items
+            if (packageItems) {
+                const items = packageItems.split(' + ');
+                modalPackageList.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+            }
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+    });
+
+    // Close modal function
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    }
+
+    // Close button click
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    // Click outside modal to close
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Press Escape to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
     });
 }
 
@@ -306,6 +388,6 @@ initWhatsAppButton();
 /**
  * Console Easter Egg
  */
-console.log('%c✨ NAULI ATTIRE ✨', 'color: #c9a96e; font-size: 24px; font-weight: bold;');
+console.log('%c NAULI ATTIRE ', 'color: #c9a96e; font-size: 24px; font-weight: bold;');
 console.log('%cPremium Kebaya Rental - Kota Sukabumi', 'color: #666; font-size: 14px;');
 console.log('%cWhatsApp: 087777812020 | Instagram: @Attirebynauli_', 'color: #888; font-size: 12px;');
