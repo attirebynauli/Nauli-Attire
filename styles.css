@@ -105,155 +105,143 @@ ul { list-style:none; }
 .card-count { font-size:0.7rem; font-weight:400; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); }
  
 /* =============================================
-   BESTSELLER SECTION
+   ALUR SEWA SECTION
    ============================================= */
-.bestseller-section {
+.alursewa-section {
     padding: 110px 0;
     background: var(--bg2);
     border-top: 1px solid var(--border2);
 }
- 
-.bestseller-grid {
+
+.alursewa-steps {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
 }
- 
-.bs-card {
-    position: relative;
-    cursor: pointer;
-    transition: var(--trans);
-    background: var(--bg3);
-    border: 1px solid var(--border2);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+
+.alur-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 8px;
 }
- 
-.bs-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--border);
-    box-shadow: 0 20px 48px rgba(0,0,0,0.4);
-}
- 
-.bs-rank {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    z-index: 3;
-    width: 32px;
-    height: 32px;
-    background: var(--gold);
-    color: var(--bg);
-    font-family: var(--serif);
-    font-size: 0.95rem;
-    font-weight: 600;
+
+.alur-icon-circle {
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg4);
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
-}
- 
-.bs-rank.rank-1 { background: var(--gold2); }
-.bs-rank.rank-2 { background: var(--gold); }
-.bs-rank.rank-3 { background: #a08050; }
-.bs-rank.rank-4 { background: #7a6040; }
- 
-.bs-badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    z-index: 3;
-    font-size: 0.6rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--bg);
-    background: var(--gold);
-    padding: 4px 10px;
-    border-radius: 2px;
-}
- 
-.bs-img-wrap {
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    position: relative;
-}
- 
-.bs-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
-    filter: brightness(0.88);
-}
- 
-.bs-card:hover .bs-img-wrap img {
-    transform: scale(1.06);
-    filter: brightness(0.75);
-}
- 
-.bs-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(8,8,7,0.7) 0%, transparent 50%);
-}
- 
-.bs-info {
-    padding: 18px 20px;
-}
- 
-.bs-series {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    transition: var(--trans);
 }
- 
-.bs-name {
+
+.alur-step:hover .alur-icon-circle {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+}
+
+.alur-arrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 28px;
+    color: rgba(200, 169, 107, 0.5);
+}
+
+.alur-step-num {
     font-family: var(--serif);
-    font-size: 1.15rem;
+    font-size: 0.68rem;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.alur-step-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
     font-weight: 400;
     color: var(--text);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
- 
-.bs-price {
-    font-size: 0.88rem;
+
+.alur-step-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.7;
+}
+
+.alur-step-desc strong {
+    color: var(--text);
     font-weight: 500;
-    color: var(--gold);
-    letter-spacing: 0.04em;
+    white-space: nowrap;
 }
- 
-.bs-fire {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text3);
-    margin-top: 8px;
+
+@media (max-width: 960px) {
+    .alursewa-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 24px;
+    }
+    .alur-arrow {
+        display: none;
+    }
+    .alur-step:last-child {
+        grid-column: 1 / -1;
+        max-width: 200px;
+        margin: 0 auto;
+    }
 }
- 
-.bs-fire::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    animation: pulse 1.8s ease-in-out infinite;
+
+@media (max-width: 480px) {
+    .alursewa-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 16px;
+    }
+    .alur-step:last-child {
+        grid-column: 1 / -1;
+        max-width: 180px;
+        margin: 0 auto;
+    }
 }
- 
-@keyframes pulse {
-    0%, 100% { opacity: 0.5; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
+
+@media (max-width: 360px) {
+    .alursewa-steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .alur-step:last-child {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
+    }
 }
- 
+/* Responsive */
+@media (max-width: 768px) {
+    .alursewa-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 16px;
+    }
+    .alur-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .alursewa-steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+} 
 /* ── SERIES ── */
 .series-section-wrapper { background:var(--bg); }
 .series-block { padding:80px 0 60px; border-top:1px solid var(--border2); }
@@ -370,6 +358,7 @@ ul { list-style:none; }
 .syarat-item strong {
     color: var(--text);
     font-weight: 500;
+    white-space: nowrap;
 }
  
 .syarat-note {
@@ -751,11 +740,6 @@ ul { list-style:none; }
 .collection-card.reveal,
 .bs-card.reveal {
   transform: translateY(50px) scale(0.96);
-}
-
-.stat-block.reveal {
-  transform: translateY(20px);
-  transition-duration: 0.55s;
 }
 
 .syarat-group.reveal,
