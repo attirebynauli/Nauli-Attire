@@ -39,10 +39,9 @@ function initNavbar() {
 
 function initReveal() {
     const targets = document.querySelectorAll(
-        '.stat-block, .about-layout > *, .collection-card, ' +
+        '.stat-block> *, .collection-card, ' +
         '.series-block-header, .color-item, .contact-card, ' +
-        '.bs-card, .syarat-group, .syarat-note'
-    );
+'       .bs-card, .syarat-group, .syarat-note, .alur-step'    );
     targets.forEach(el => el.classList.add('reveal'));
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => {
