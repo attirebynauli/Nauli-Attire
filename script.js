@@ -152,7 +152,6 @@ function mcGoTo(index) {
         placeholder.style.display = 'flex';
     }
     mcCurrent = index;
-    thumbEls[index]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 }
 
 function mcStartAutoplay() {
