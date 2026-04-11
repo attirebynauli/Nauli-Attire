@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scroll-override.css">
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -21,7 +22,7 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Beranda</a></li>
-                <li><a href="#bestseller" class="nav-link">Terlaris</a></li>
+                <li><a href="#bestseller" class="nav-link">Terbaru</a></li>
                 <li><a href="#collection" class="nav-link">Series</a></li>
                 <li><a href="#series" class="nav-link">Katalog</a></li>
                 <li><a href="#syarat" class="nav-link">S&K</a></li>
@@ -61,31 +62,28 @@
     <section id="bestseller" class="bestseller-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Pilihan Favorit</span>
-                <h2 class="section-title">Kebaya <em>Terlaris</em></h2>
-                <p class="section-sub">Paling banyak dipilih pelanggan bulan ini</p>
+                <h2 class="section-title">Kebaya <em>Terbaru</em></h2>
             </div>
             <div class="bestseller-grid">
 
                 <!-- #1 -->
                 <div class="bs-card reveal"
                     data-series="Alanya Series"
-                    data-color-name="Blush Pink"
+                    data-color-name="Emerald Blue"
                     data-price="Rp 400.000"
                     data-package="LD 94 max 98 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize"
-                    data-image="image/alanya/alanya-blush-pink.png"
+                    data-image="image/edita/edita-emerald-blue.png"
                     data-photos='["","","","",""]'>
-                    <div class="bs-rank rank-1">1</div>
-                    <div class="bs-badge">Terlaris</div>
+                    <div class="bs-badge">Terbaru</div>
                     <div class="bs-img-wrap">
-                        <img src="image/alanya/alanya-blush-pink.png" alt="Alanya Blush Pink" loading="lazy">
+                        <img src="image/edita/edita-emerald-blue.jpeg" alt="Alanya Emerald Blue" loading="lazy">
                         <div class="bs-overlay"></div>
                     </div>
                     <div class="bs-info">
-                        <div class="bs-series">Alanya Series</div>
-                        <div class="bs-name">Blush Pink</div>
-                        <div class="bs-price">Rp 400.000</div>
-                        <div class="bs-fire">Paling diminati</div>
+                        <div class="bs-series">Edita Series</div>
+                        <div class="bs-name">Emerald Blue</div>
+                        <div class="bs-price">Rp 375.000</div>
+                        <div class="bs-fire">Kebaya Terbaru </div>
                     </div>
                 </div>
 
@@ -97,61 +95,18 @@
                     data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize"
                     data-image="image/edita/edita-creamy-nude.png"
                     data-photos='["image/Customer Foto/Creamy-nude/creamy-nude.jpeg","","","",""]'>
-                    <div class="bs-rank rank-2">2</div>
+                    <div class="bs-badge">Terbaru</div>
                     <div class="bs-img-wrap">
-                        <img src="image/edita/edita-creamy-nude.png" alt="Edita Creamy Nude" loading="lazy">
+                        <img src="image/alanya/alanya-rosegold.jpeg" alt="Alanya Rosegold" loading="lazy">
                         <div class="bs-overlay"></div>
                     </div>
                     <div class="bs-info">
-                        <div class="bs-series">Edita Series</div>
-                        <div class="bs-name">Creamy Nude</div>
-                        <div class="bs-price">Rp 350.000</div>
-                        <div class="bs-fire">Favorit pelanggan</div>
+                        <div class="bs-series">Alanya Series</div>
+                        <div class="bs-name">Alanya Rosegold</div>
+                        <div class="bs-price">Rp 400.000</div>
+                        <div class="bs-fire">Kebaya Terbaru </div>
                     </div>
                 </div>
-
-                <!-- #3 -->
-                <div class="bs-card reveal"
-                    data-series="Elysian Series"
-                    data-color-name="Blue Denim"
-                    data-price="Rp 390.000"
-                    data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize"
-                    data-image="image/elysian/elysian-denim.png"
-                    data-photos='["","","","",""]'>
-                    <div class="bs-rank rank-3">3</div>
-                    <div class="bs-img-wrap">
-                        <img src="image/elysian/elysian-denim.png" alt="Elysian Blue Denim" loading="lazy">
-                        <div class="bs-overlay"></div>
-                    </div>
-                    <div class="bs-info">
-                        <div class="bs-series">Elysian Series</div>
-                        <div class="bs-name">Blue Denim</div>
-                        <div class="bs-price">Rp 390.000</div>
-                        <div class="bs-fire">Banyak dipesan</div>
-                    </div>
-                </div>
-
-                <!-- #4 -->
-                <div class="bs-card reveal"
-                    data-series="Calla Series"
-                    data-color-name="Ice Blue"
-                    data-price="Rp 350.000"
-                    data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize"
-                    data-image="image/calla/calla-ice-blue.png"
-                    data-photos='["","","","",""]'>
-                    <div class="bs-rank rank-4">4</div>
-                    <div class="bs-img-wrap">
-                        <img src="image/calla/calla-ice-blue.png" alt="Calla Ice Blue" loading="lazy">
-                        <div class="bs-overlay"></div>
-                    </div>
-                    <div class="bs-info">
-                        <div class="bs-series">Calla Series</div>
-                        <div class="bs-name">Ice Blue</div>
-                        <div class="bs-price">Rp 350.000</div>
-                        <div class="bs-fire">Pilihan populer</div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -206,7 +161,7 @@
         <div class="series-block" id="edita">
             <div class="series-block-header"><div class="container"><span class="series-num">01</span><h2 class="series-name">Edita Series</h2></div></div>
             <div class="container"><div class="color-grid">
-                <div class="color-item" data-series="Edita Series" data-color-name="Creamy Nude" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-creamy-nude.png" data-photos='["image/Customer Foto/Creamy-nude/creamy-nude.jpeg","image/customer-foto/creamy-nud2.jpeg","image/customer-foto/creamy-nud3.jpeg","image/customer-foto/creamy-nud4.jpeg","image/customer-foto/creamy-nud5.jpeg"]'>
+                <div class="color-item" data-series="Edita Series" data-color-name="Creamy Nude" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-creamy-nude.png" data-photos='["image/customer-Foto/Creamy-nude/creamy-nude.jpeg","image/customer-foto/Creamy-nude/creamy-nud2.jpeg","image/customer-foto/creamy-nude/creamy-nude1.jpeg","image/customer-foto/creamy-nude/creamy-nude3.jpeg","image/customer-foto/creamy-nude/creamy-nude4.jpeg"]'>
                     <div class="ci-img"><img src="image/edita/edita-creamy-nude.png" alt="Creamy Nude"></div><div class="ci-name">Creamy Nude</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
                 </div>
                 <div class="color-item" data-series="Edita Series" data-color-name="Blush Pink" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil + Free laundry + Free Resize" data-image="image/edita/edita-blush-pink.png" data-photos='["","","","",""]'>
