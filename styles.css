@@ -65,6 +65,8 @@ ul { list-style:none; }
 .hero-corner-text { position:absolute; bottom:2.5rem; right:3rem; font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--text3); writing-mode:vertical-rl; z-index:2; }
 @keyframes scrollBounce { 0%,100%{transform:translateY(0);opacity:0.4}50%{transform:translateY(8px);opacity:1} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
+.hero-scroll { animation: heroScrollIn 0.8s ease 1.1s forwards !important;}
+@keyframes heroScrollIn { from { opacity: 0; transform: translateX(-50%) translateY(24px);}to {opacity: 1;transform: translateX(-50%) translateY(0);}}
  
 /* ── STATS STRIP ── */
 .stats-strip { background:var(--bg3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
@@ -731,4 +733,32 @@ ul { list-style:none; }
  
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.75s ease,
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* efek berbeda per jenis elemen */
+.collection-card.reveal,
+.bs-card.reveal {
+  transform: translateY(50px) scale(0.96);
+}
+
+.stat-block.reveal {
+  transform: translateY(20px);
+  transition-duration: 0.55s;
+}
+
+.syarat-group.reveal,
+.contact-card.reveal {
+  transform: translateY(30px);
 }
