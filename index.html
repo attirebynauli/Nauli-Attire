@@ -7,518 +7,535 @@
     <meta name="description" content="Nauli Attire - Sewa kebaya premium dengan harga affordable di Kota Sukabumi. 6 series kebaya eksklusif untuk momen spesial Anda.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">NAULI ATTIRE</a>
+            <a href="#home" class="nav-logo">
+                <span class="logo-n">N</span><span class="logo-rest">AULI ATTIRE</span>
+            </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Beranda</a></li>
-                <li><a href="#collection" class="nav-link">Katalog</a></li>
-                <li><a href="#series" class="nav-link">Series</a></li>
+                <li><a href="#bestseller" class="nav-link">Terlaris</a></li>
+                <li><a href="#collection" class="nav-link">Series</a></li>
+                <li><a href="#series" class="nav-link">Katalog</a></li>
+                <li><a href="#syarat" class="nav-link">S&K</a></li>
                 <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg"><div class="hero-grain"></div><div class="hero-lines"></div></div>
         <div class="hero-content">
-            <h1 class="hero-title fade-in">NAULI ATTIRE</h1>
-            <p class="hero-subtitle fade-in">Kebaya Premium Harga Affordable</p>
-            <a href="https://wa.me/6287777812020" class="hero-cta fade-in" target="_blank">
-                Booking via WhatsApp
-            </a>
+            <h1 class="hero-title"><span class="hero-title-line">NAULI ATTIRE</span></h1>
+            <p class="hero-tagline">Sewa kebaya Premium<br>Harga Affordable</p>
+            <div class="hero-actions">
+                <a href="#collection" class="btn-primary">Lihat Series</a>
+            </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
+        <div class="hero-scroll"><div class="scroll-dot"></div><span>Scroll</span></div>
+        <div class="hero-corner-text">6 Series Eksklusif</div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
+    <div class="stats-strip">
+        <div class="stats-container">
+            <div class="stat-block"><span class="stat-num">6</span><span class="stat-lbl">Series Eksklusif</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-block"><span class="stat-num">20+</span><span class="stat-lbl">Pilihan Warna</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-block"><span class="stat-num">100%</span><span class="stat-lbl">Full Payet</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-block"><span class="stat-num">Free</span><span class="stat-lbl">Laundry &amp; Resize</span></div>
+        </div>
+    </div>
+
+        <!-- =============================================
+         BESTSELLER SECTION
+         ============================================= -->
+    <section id="bestseller" class="bestseller-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Nauli Attire</h2>
-                    <p class="about-description">
-                        Nauli Attire hadir untuk memenuhi kebutuhan kebaya premium Anda dengan harga yang terjangkau.
-                        Dengan 6 series eksklusif yang masing-masing memiliki pilihan warna yang beragam,
-                        kami siap menemani momen spesial Anda menjadi lebih berkesan.
-                    </p>
+            <div class="section-header">
+                <span class="section-label">Pilihan Favorit</span>
+                <h2 class="section-title">Kebaya <em>Terlaris</em></h2>
+                <p class="section-sub">Paling banyak dipilih pelanggan bulan ini</p>
+            </div>
+            <div class="bestseller-grid">
+
+                <!-- #1 -->
+                <div class="bs-card reveal"
+                    data-series="Alanya Series"
+                    data-color-name="Blush Pink"
+                    data-price="Rp 400.000"
+                    data-package="LD 94 max 98 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize"
+                    data-image="image/alanya/alanya-blush-pink.png"
+                    data-photos='["","","","",""]'>
+                    <div class="bs-rank rank-1">1</div>
+                    <div class="bs-badge">Terlaris</div>
+                    <div class="bs-img-wrap">
+                        <img src="image/alanya/alanya-blush-pink.png" alt="Alanya Blush Pink" loading="lazy">
+                        <div class="bs-overlay"></div>
+                    </div>
+                    <div class="bs-info">
+                        <div class="bs-series">Alanya Series</div>
+                        <div class="bs-name">Blush Pink</div>
+                        <div class="bs-price">Rp 400.000</div>
+                        <div class="bs-fire">Paling diminati</div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">Series Eksklusif</span>
+
+                <!-- #2 -->
+                <div class="bs-card reveal"
+                    data-series="Edita Series"
+                    data-color-name="Creamy Nude"
+                    data-price="Rp 350.000"
+                    data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize"
+                    data-image="image/edita/edita-creamy-nude.png"
+                    data-photos='["image/Customer Foto/Creamy-nude/creamy-nude.jpeg","","","",""]'>
+                    <div class="bs-rank rank-2">2</div>
+                    <div class="bs-img-wrap">
+                        <img src="image/edita/edita-creamy-nude.png" alt="Edita Creamy Nude" loading="lazy">
+                        <div class="bs-overlay"></div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Pilihan Warna</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Kualitas Premium</span>
+                    <div class="bs-info">
+                        <div class="bs-series">Edita Series</div>
+                        <div class="bs-name">Creamy Nude</div>
+                        <div class="bs-price">Rp 350.000</div>
+                        <div class="bs-fire">Favorit pelanggan</div>
                     </div>
                 </div>
+
+                <!-- #3 -->
+                <div class="bs-card reveal"
+                    data-series="Elysian Series"
+                    data-color-name="Blue Denim"
+                    data-price="Rp 390.000"
+                    data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize"
+                    data-image="image/elysian/elysian-denim.png"
+                    data-photos='["","","","",""]'>
+                    <div class="bs-rank rank-3">3</div>
+                    <div class="bs-img-wrap">
+                        <img src="image/elysian/elysian-denim.png" alt="Elysian Blue Denim" loading="lazy">
+                        <div class="bs-overlay"></div>
+                    </div>
+                    <div class="bs-info">
+                        <div class="bs-series">Elysian Series</div>
+                        <div class="bs-name">Blue Denim</div>
+                        <div class="bs-price">Rp 390.000</div>
+                        <div class="bs-fire">Banyak dipesan</div>
+                    </div>
+                </div>
+
+                <!-- #4 -->
+                <div class="bs-card reveal"
+                    data-series="Calla Series"
+                    data-color-name="Ice Blue"
+                    data-price="Rp 350.000"
+                    data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize"
+                    data-image="image/calla/calla-ice-blue.png"
+                    data-photos='["","","","",""]'>
+                    <div class="bs-rank rank-4">4</div>
+                    <div class="bs-img-wrap">
+                        <img src="image/calla/calla-ice-blue.png" alt="Calla Ice Blue" loading="lazy">
+                        <div class="bs-overlay"></div>
+                    </div>
+                    <div class="bs-info">
+                        <div class="bs-series">Calla Series</div>
+                        <div class="bs-name">Ice Blue</div>
+                        <div class="bs-price">Rp 350.000</div>
+                        <div class="bs-fire">Pilihan populer</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Collection Preview -->
     <section id="collection" class="collection">
         <div class="container">
-            <h2 class="section-title text-center">KATALOG</h2>
-            <p class="section-subtitle text-center">Pilihan kebaya premium untuk setiap momen spesial</p>
-
+            <div class="section-header">
+                <span class="section-label">Series Kami</span>
+                <h2 class="section-title">SERIES</h2>
+                <p class="section-sub">Klik series untuk melihat katalog</p>
+            </div>
             <div class="collection-grid">
                 <div class="collection-card" data-series="edita">
-                    <div class="collection-image">
-                        <img src="image/edita/edita-blush-pink.png" alt="Edita Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Edita Series</h3>
-                        <p>5 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/edita/edita-blush-pink.png" alt="Edita Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Edita Series →</span></div></div>
+                    <div class="card-info"><h3>Edita Series</h3><span class="card-count">5 Warna</span></div>
                 </div>
                 <div class="collection-card" data-series="calla">
-                    <div class="collection-image">
-                        <img src="image/calla/calla-ice-blue.png" alt="Calla Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Calla Series</h3>
-                        <p>4 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/calla/calla-ice-blue.png" alt="Calla Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Lihat Series →</span></div></div>
+                    <div class="card-info"><h3>Calla Series</h3><span class="card-count">4 Warna</span></div>
                 </div>
                 <div class="collection-card" data-series="shreya">
-                    <div class="collection-image">
-                        <img src="image/shreya/shreya-burgundy.png" alt="Shreya Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Shreya Series</h3>
-                        <p>2 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/shreya/shreya-burgundy.png" alt="Shreya Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Lihat Series →</span></div></div>
+                    <div class="card-info"><h3>Shreya Series</h3><span class="card-count">2 Warna</span></div>
                 </div>
                 <div class="collection-card" data-series="aurora">
-                    <div class="collection-image">
-                        <img src="image/aurora/Mahogany.png" alt="Aurora Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Aurora Series</h3>
-                        <p>1 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/aurora/Mahogany.png" alt="Aurora Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Lihat Series →</span></div></div>
+                    <div class="card-info"><h3>Aurora Series</h3><span class="card-count">1 Warna</span></div>
                 </div>
                 <div class="collection-card" data-series="elysian">
-                    <div class="collection-image">
-                        <img src="image/elysian/elysian-denim.png" alt="Elysian Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Elysian Series</h3>
-                        <p>3 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/elysian/elysian-denim.png" alt="Elysian Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Lihat Series →</span></div></div>
+                    <div class="card-info"><h3>Elysian Series</h3><span class="card-count">3 Warna</span></div>
                 </div>
                 <div class="collection-card" data-series="alanya">
-                    <div class="collection-image">
-                        <img src="image/alanya/alanya-butter-yellow.png" alt="Alanya Series">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Alanya Series</h3>
-                        <p>5 Series Tersedia</p>
-                    </div>
+                    <div class="card-img-wrap"><img src="image/alanya/alanya-butter-yellow.png" alt="Alanya Series" loading="lazy"><div class="card-overlay"><span class="card-cta">Lihat Series →</span></div></div>
+                    <div class="card-info"><h3>Alanya Series</h3><span class="card-count">5 Warna</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Series Detail Section -->
-    <section id="series" class="series-detail">
 
-        <!-- Edita Series -->
-        <div class="series-section" id="edita">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Edita Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid">
-                        <div class="color-item" data-series="Edita Series" data-color-name="Creamy Nude" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-creamy-nude.png">
-                            <img src="image/edita/edita-creamy-nude.png">
-                            <div class="color-info">
-                                <h4>Creamy Nude</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Edita Series" data-color-name="Blush Pink" data-price="Rp350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil + Free laundry + Free Resize" data-image="image/edita/edita-blush-pink.png">
-                            <img src="image/edita/edita-blush-pink.png">
-                            <div class="color-info">
-                                <h4>Blush Pink</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Edita Series" data-color-name="Nude Pink" data-price="Rp. 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-nude-pink.png">
-                            <img src="image/edita/edita-nude-pink.png">
-                            <div class="color-info">
-                                <h4>Nude Pink</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Edita Series" data-color-name="Navy" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-navy.png">
-                            <img src="image/edita/edita-navy.png">
-                            <div class="color-info">
-                                <h4>Navy</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Edita Series" data-color-name="Emerald Blue" data-price="Rp 375.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-emerald-blue.jpeg">
-                            <img src="image/edita/edita-emerald-blue.jpeg">
-                            <div class="color-info">
-                                <h4>Emerald Blue</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Calla Series -->
-        <div class="series-section" id="calla">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Calla Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid">
-                        <div class="color-item" data-series="Calla Series" data-color-name="Caramel" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-caramel.png">
-                            <img src="image/calla/calla-caramel.png">
-                            <div class="color-info">
-                                <h4>Caramel</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Calla Series" data-color-name="Grey" data-price="Rp350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-grey.png">
-                            <img src="image/calla/calla-grey.png">
-                            <div class="color-info">
-                                <h4>Grey</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Calla Series" data-color-name="Ice Blue" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-ice-blue.png">
-                            <img src="image/calla/calla-ice-blue.png">
-                            <div class="color-info">
-                                <h4>Ice Blue</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Calla Series" data-color-name="Maroon" data-price="Rp350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-maroon.png">
-                            <img src="image/calla/calla-maroon.png">
-                            <div class="color-info">
-                                <h4>Maroon</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Shreya Series -->
-        <div class="series-section" id="shreya">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Shreya Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid">
-                        <div class="color-item" data-series="Shreya Series" data-color-name="Burgundy" data-price="Rp350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/shreya/shreya-burgundy.png">
-                            <img src="image/shreya/shreya-burgundy.png">
-                            <div class="color-info">
-                                <h4>Burgundy</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Shreya Series" data-color-name="Ice Blue" data-price="Rp350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/shreya/shreya-ice-blue.png">
-                            <img src="image/shreya/shreya-ice-blue.png">
-                            <div class="color-info">
-                                <h4>Ice Blue</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="series-image-showcase"></div>
-            </div>
-        </div>
-
-        <!-- Aurora Series -->
-        <div class="series-section" id="aurora">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Aurora Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid color-grid-single">
-                        <div class="color-item" data-series="Aurora Series" data-color-name="Mahogany" data-price="Rp 350.000" data-package="LD 120 max 125 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/aurora/Mahogany.png">
-                            <img src="image/aurora/Mahogany.png">
-                            <div class="color-info">
-                                <h4>Mahogany</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Elysian Series -->
-        <div class="series-section" id="elysian">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Elysian Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid">
-                        <div class="color-item" data-series="Elysian Series" data-color-name="Baby Pink" data-price="Rp 390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/elysian/elysian-baby-pink.png">
-                            <img src="image/elysian/elysian-baby-pink.png" alt="Baby Pink">
-                            <div class="color-info">
-                                <h4>Baby Pink</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Elysian Series" data-color-name="Blue Denim" data-price="Rp390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/elysian/elysian-denim.png">
-                            <img src="image/elysian/elysian-denim.png">
-                            <div class="color-info">
-                                <h4>Blue Denim</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Elysian Series" data-color-name="Mauve" data-price="Rp 350.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-mauve.png">
-                            <img src="image/edita/edita-mauve.png">
-                            <div class="color-info">
-                                <h4>Mauve</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Alanya Series -->
-        <div class="series-section" id="alanya">
-            <div class="container">
-                <div class="series-header">
-                    <h2 class="series-title">Alanya Series</h2>
-                </div>
-                <div class="series-description"></div>
-                <div class="color-catalog">
-                    <div class="color-grid">
-                        <div class="color-item" data-series="Alanya Series" data-color-name="Blush Pink" data-price="Rp 400.000" data-package="LD 94 max 98 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-blush-pink.png">
-                            <img src="image/alanya/alanya-blush-pink.png">
-                            <div class="color-info">
-                                <h4>Blush Pink</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Alanya Series" data-color-name="Butter Yellow" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-butter-yellow.png">
-                            <img src="image/alanya/alanya-butter-yellow.png">
-                            <div class="color-info">
-                                <h4>Butter Yellow</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Alanya Series" data-color-name="Creamy Nude" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-creamy-nude.png">
-                            <img src="image/alanya/alanya-creamy-nude.png">
-                            <div class="color-info">
-                                <h4>Creamy Nude</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Alanya Series" data-color-name="Rose Gold" data-price="Rp 400.000" data-package="LD 92 max 97 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-rosegold.jpeg">
-                            <img src="image/alanya/alanya-rosegold.jpeg">
-                            <div class="color-info">
-                                <h4>Rose Gold</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                        <div class="color-item" data-series="Alanya Series" data-color-name="Emerald" data-price="Rp 350.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-emerald.png">
-                            <img src="image/alanya/alanya-emerald.png">
-                            <div class="color-info">
-                                <h4>Emerald</h4>
-                                <p class="color-price">Cek Detail Kebaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="series" class="series-section-wrapper">
         <div class="container">
-            <h2 class="section-title text-center">Hubungi Kami</h2>
-            <p class="section-subtitle text-center">Siap membantu Anda menemukan kebaya sempurna</p>
+            <div class="section-header">
+                <span class="section-label">Katalog Kami</span>
+                <h2 class="section-title">KATALOG</h2>
+                <p class="section-sub">Klik Katalog untuk melihat detail</p>
+               
+            </div>
 
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                    </div>
-                    <h3>WhatsApp</h3>
-                    <p>087777812020</p>
-                    <a href="https://wa.me/6287777812020" class="contact-btn" target="_blank">Booking Sekarang</a>
+        <!-- EDITA -->
+        <div class="series-block" id="edita">
+            <div class="series-block-header"><div class="container"><span class="series-num">01</span><h2 class="series-name">Edita Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Edita Series" data-color-name="Creamy Nude" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-creamy-nude.png" data-photos='["image/Customer Foto/Creamy-nude/creamy-nude.jpeg","image/customer-foto/creamy-nud2.jpeg","image/customer-foto/creamy-nud3.jpeg","image/customer-foto/creamy-nud4.jpeg","image/customer-foto/creamy-nud5.jpeg"]'>
+                    <div class="ci-img"><img src="image/edita/edita-creamy-nude.png" alt="Creamy Nude"></div><div class="ci-name">Creamy Nude</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
                 </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </div>
-                    <h3>Instagram</h3>
-                    <p>@Attirebynauli_</p>
-                    <a href="https://instagram.com/Attirebynauli_" class="contact-btn" target="_blank">Kunjungi Instagram</a>
+                <div class="color-item" data-series="Edita Series" data-color-name="Blush Pink" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil + Free laundry + Free Resize" data-image="image/edita/edita-blush-pink.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/edita/edita-blush-pink.png" alt="Blush Pink"></div><div class="ci-name">Blush Pink</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
                 </div>
+                <div class="color-item" data-series="Edita Series" data-color-name="Nude Pink" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-nude-pink.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/edita/edita-nude-pink.png" alt="Nude Pink"></div><div class="ci-name">Nude Pink</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Edita Series" data-color-name="Navy" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-navy.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/edita/edita-navy.png" alt="Navy"></div><div class="ci-name">Navy</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Edita Series" data-color-name="Emerald Blue" data-price="Rp 375.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-emerald-blue.jpeg" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/edita/edita-emerald-blue.jpeg" alt="Emerald Blue"></div><div class="ci-name">Emerald Blue</div><div class="ci-price">Rp 375.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.832 2.688A4.056 4.056 0 0 0 8.02 1.5h-.04a4.056 4.056 0 0 0-4 4c-.013.75.198 1.487.606 2.117L7.734 14h.533l3.147-6.383c.409-.63.62-1.367.606-2.117a4.056 4.056 0 0 0-1.188-2.812zM7.925 2.5l.082.01.074-.01a3.075 3.075 0 0 1 2.941 3.037 2.74 2.74 0 0 1-.467 1.568l-.02.034-.017.035L8 12.279l-2.517-5.1-.017-.039-.02-.034a2.74 2.74 0 0 1-.467-1.568A3.074 3.074 0 0 1 7.924 2.5zm.612 2.169a1 1 0 1 0-1.112 1.663 1 1 0 0 0 1.112-1.663zM6.87 3.837a2 2 0 1 1 2.22 3.326 2 2 0 0 1-2.22-3.326z"/></svg>
-                    </div>
-                    <h3>Lokasi</h3>
-                    <p>Kota Sukabumi</p>
-                    <a href="https://www.google.com/maps/place/attirebynauli_/@-6.9308176,106.9425356,17z/data=!3m1!4b1!4m6!3m5!1s0x2e684900182cdf6b:0x543907e27b276290!8m2!3d-6.9308229!4d106.9451105!16s%2Fg%2F11wpl1xbb4?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D" class="contact-btn" target="_blank">Lihat di Maps</a>
+        <!-- CALLA -->
+        <div class="series-block alt" id="calla">
+            <div class="series-block-header"><div class="container"><span class="series-num">02</span><h2 class="series-name">Calla Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Calla Series" data-color-name="Caramel" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-caramel.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/calla/calla-caramel.png" alt="Caramel"></div><div class="ci-name">Caramel</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Calla Series" data-color-name="Grey" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-grey.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/calla/calla-grey.png" alt="Grey"></div><div class="ci-name">Grey</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Calla Series" data-color-name="Ice Blue" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-ice-blue.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/calla/calla-ice-blue.png" alt="Ice Blue"></div><div class="ci-name">Ice Blue</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Calla Series" data-color-name="Maroon" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/calla/calla-maroon.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/calla/calla-maroon.png" alt="Maroon"></div><div class="ci-name">Maroon</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- SHREYA -->
+        <div class="series-block" id="shreya">
+            <div class="series-block-header"><div class="container"><span class="series-num">03</span><h2 class="series-name">Shreya Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Shreya Series" data-color-name="Burgundy" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/shreya/shreya-burgundy.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/shreya/shreya-burgundy.png" alt="Burgundy"></div><div class="ci-name">Burgundy</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Shreya Series" data-color-name="Ice Blue" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/shreya/shreya-ice-blue.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/shreya/shreya-ice-blue.png" alt="Ice Blue"></div><div class="ci-name">Ice Blue</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- AURORA -->
+        <div class="series-block alt" id="aurora">
+            <div class="series-block-header"><div class="container"><span class="series-num">04</span><h2 class="series-name">Aurora Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Aurora Series" data-color-name="Mahogany" data-price="Rp 350.000" data-package="LD 120 max 125 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/aurora/Mahogany.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/aurora/Mahogany.png" alt="Mahogany"></div><div class="ci-name">Mahogany</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- ELYSIAN -->
+        <div class="series-block" id="elysian">
+            <div class="series-block-header"><div class="container"><span class="series-num">05</span><h2 class="series-name">Elysian Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Elysian Series" data-color-name="Baby Pink" data-price="Rp 390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/elysian/elysian-baby-pink.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/elysian/elysian-baby-pink.png" alt="Baby Pink"></div><div class="ci-name">Baby Pink</div><div class="ci-price">Rp 390.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Elysian Series" data-color-name="Blue Denim" data-price="Rp 390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/elysian/elysian-denim.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/elysian/elysian-denim.png" alt="Blue Denim"></div><div class="ci-name">Blue Denim</div><div class="ci-price">Rp 390.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Elysian Series" data-color-name="Mauve" data-price="Rp 350.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/edita/edita-mauve.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/edita/edita-mauve.png" alt="Mauve"></div><div class="ci-name">Mauve</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- ALANYA -->
+        <div class="series-block alt" id="alanya">
+            <div class="series-block-header"><div class="container"><span class="series-num">06</span><h2 class="series-name">Alanya Series</h2></div></div>
+            <div class="container"><div class="color-grid">
+                <div class="color-item" data-series="Alanya Series" data-color-name="Blush Pink" data-price="Rp 400.000" data-package="LD 94 max 98 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-blush-pink.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/alanya/alanya-blush-pink.png" alt="Blush Pink"></div><div class="ci-name">Blush Pink</div><div class="ci-price">Rp 400.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Alanya Series" data-color-name="Butter Yellow" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-butter-yellow.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/alanya/alanya-butter-yellow.png" alt="Butter Yellow"></div><div class="ci-name">Butter Yellow</div><div class="ci-price">Rp 375.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Alanya Series" data-color-name="Creamy Nude" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-creamy-nude.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/alanya/alanya-creamy-nude.png" alt="Creamy Nude"></div><div class="ci-name">Creamy Nude</div><div class="ci-price">Rp 375.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Alanya Series" data-color-name="Rose Gold" data-price="Rp 400.000" data-package="LD 92 max 97 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-rosegold.jpeg" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/alanya/alanya-rosegold.jpeg" alt="Rose Gold"></div><div class="ci-name">Rose Gold</div><div class="ci-price">Rp 400.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+                <div class="color-item" data-series="Alanya Series" data-color-name="Emerald" data-price="Rp 350.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="image/alanya/alanya-emerald.png" data-photos='["","","","",""]'>
+                    <div class="ci-img"><img src="image/alanya/alanya-emerald.png" alt="Emerald"></div><div class="ci-name">Emerald</div><div class="ci-price">Rp 350.000</div><div class="ci-cta">Lihat Detail</div>
+                </div>
+            </div></div>
+        </div>
+
+    </section>
+
+        <section class="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-left">
+                    <span class="section-label">Tentang Kami</span>
+                    <h2 class="about-title">NAULI <em>ATTIRE</em></h2>
+                </div>
+                <div class="about-right">
+                    <p class="about-body">Nauli Attire hadir untuk memenuhi kebutuhan kebaya premium Anda dengan harga yang terjangkau. Dengan 6 series eksklusif yang masing-masing memiliki pilihan warna yang beragam, kami siap menemani momen spesial Anda menjadi lebih berkesan.</p>
+                    <p class="about-body">Setiap paket sudah termasuk kebaya full payet, rok songket, hijab, manset, long torso, dan veil — semua dalam satu harga.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8!2d106.9425356!3d-6.9308176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684900182cdf6b%3A0x543907e27b276290!2sattirebynauli_!5e0!3m2!1sen!2sid!4v1"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <!-- =============================================
+         SYARAT & KETENTUAN SECTION
+         ============================================= -->
+    <section id="syarat" class="syarat-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Informasi Penting</span>
+                <h2 class="section-title">Syarat &amp; <em>Ketentuan Sewa</em></h2>
+                <p class="section-sub">Harap dibaca sebelum melakukan pemesanan</p>
+            </div>
+
+            <div class="syarat-grid">
+
+                <!-- Pemesanan & Pembayaran -->
+                <div class="syarat-group">
+                    <div class="syarat-group-header">
+                        <div class="syarat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="syarat-group-title">Pemesanan &amp; Pembayaran</h3>
+                    </div>
+                    <div class="syarat-list">
+                        <div class="syarat-item">Pemesanan dilakukan melalui <strong>WhatsApp</strong> dengan menyebutkan series, warna, dan tanggal sewa yang diinginkan.</div>
+                        <div class="syarat-item">Booking dikonfirmasi setelah <strong>DP minimal 50%</strong> dari total harga sewa diterima.</div>
+                        <div class="syarat-item">Pelunasan <strong>100%</strong> dilakukan paling lambat H-1 sebelum tanggal pengambilan.</div>
+                        <div class="syarat-item">Pembayaran dapat dilakukan via <strong>Transfer Bank / QRIS</strong>.</div>
+                        <div class="syarat-item"><strong>DP tidak dapat dikembalikan</strong> apabila penyewa membatalkan pemesanan.</div>
+                    </div>
+                </div>
+
+                <!-- Durasi & Pengambilan -->
+                <div class="syarat-group">
+                    <div class="syarat-group-header">
+                        <div class="syarat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="syarat-group-title">Durasi &amp; Pengambilan</h3>
+                    </div>
+                    <div class="syarat-list">
+                        <div class="syarat-item">Masa sewa adalah <strong>1 hari (H sewa)</strong>, termasuk H-1 pengambilan dan H+1 pengembalian.</div>
+                        <div class="syarat-item">Pengambilan dilakukan <strong>H-1 sore/malam</strong> sesuai perjanjian agar siap dipakai keesokan harinya.</div>
+                        <div class="syarat-item">Pengembalian <strong>H+1 paling lambat pukul 12.00 WIB</strong>. Keterlambatan dikenakan biaya tambahan Rp 50.000/jam.</div>
+                        <div class="syarat-item">Pengambilan dan pengembalian dilakukan di <strong>Kota Sukabumi</strong> sesuai alamat yang disepakati.</div>
+                    </div>
+                </div>
+
+                <!-- Perawatan & Tanggung Jawab -->
+                <div class="syarat-group">
+                    <div class="syarat-group-header">
+                        <div class="syarat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="syarat-group-title">Perawatan &amp; Tanggung Jawab</h3>
+                    </div>
+                    <div class="syarat-list">
+                        <div class="syarat-item">Penyewa <strong>bertanggung jawab penuh</strong> atas kebersihan dan kondisi pakaian selama masa sewa.</div>
+                        <div class="syarat-item">Dilarang <strong>menyetrika, mencuci, atau mempermak sendiri</strong> pakaian yang disewa tanpa izin.</div>
+                        <div class="syarat-item">Kerusakan atau kehilangan pakaian akan <strong>dikenakan biaya ganti rugi</strong> sesuai harga pakaian.</div>
+                        <div class="syarat-item">Noda berat (cat, tinta permanen, dll) yang tidak dapat dibersihkan termasuk kategori <strong>kerusakan</strong>.</div>
+                        <div class="syarat-item">Free laundry berlaku untuk <strong>noda wajar</strong> akibat pemakaian normal.</div>
+                    </div>
+                </div>
+
+                <!-- Fitting & Ukuran -->
+                <div class="syarat-group">
+                    <div class="syarat-group-header">
+                        <div class="syarat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="syarat-group-title">Fitting &amp; Ukuran</h3>
+                    </div>
+                    <div class="syarat-list">
+                        <div class="syarat-item">Disarankan melakukan <strong>fitting terlebih dahulu</strong> sebelum tanggal sewa untuk memastikan kesesuaian ukuran.</div>
+                        <div class="syarat-item">Pastikan ukuran <strong>Lingkar Dada (LD)</strong> sesuai dengan spesifikasi masing-masing series sebelum booking.</div>
+                        <div class="syarat-item">Free <strong>resize rok</strong> tersedia namun harus dikonfirmasi minimal <strong>3 hari sebelum</strong> tanggal sewa.</div>
+                        <div class="syarat-item">Nauli Attire tidak bertanggung jawab atas ketidakcocokan ukuran jika <strong>tidak melalui proses fitting</strong> yang disarankan.</div>
+                    </div>
+                </div>
+
+                <!-- Catatan Penting -->
+                <div class="syarat-note">
+                    <div class="syarat-note-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="syarat-note-text">
+                        <strong>Catatan Penting:</strong> Nauli Attire berhak menolak pemesanan apabila jadwal sudah penuh. Selalu cek ketersediaan tanggal terlebih dahulu melalui tombol <strong>"Cek Tanggal"</strong> pada detail setiap kebaya, atau hubungi kami langsung via WhatsApp <strong>087777812020</strong>. Dengan melakukan pemesanan, penyewa dianggap telah membaca dan menyetujui seluruh syarat &amp; ketentuan di atas.
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Hubungi Kami</span>
+                <h2 class="section-title">Siap Membantu<br><em>Momen Spesial Anda</em></h2>
+            </div>
+            <div class="contact-grid">
+                <a href="https://wa.me/6287777812020" class="contact-card" target="_blank">
+                    <div class="cc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+                    <div class="cc-text"><span class="cc-label">WhatsApp</span><span class="cc-value">087777812020</span><span class="cc-action">Booking Sekarang →</span></div>
+                </a>
+                <a href="https://instagram.com/Attirebynauli_" class="contact-card" target="_blank">
+                    <div class="cc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+                    <div class="cc-text"><span class="cc-label">Instagram</span><span class="cc-value">@Attirebynauli_</span><span class="cc-action">Kunjungi Profil →</span></div>
+                </a>
+                <a href="https://www.google.com/maps/place/attirebynauli_/" class="contact-card" target="_blank">
+                    <div class="cc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+                    <div class="cc-text"><span class="cc-label">Lokasi</span><span class="cc-value">Kota Sukabumi</span><span class="cc-action">Lihat di Maps →</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8!2d106.9425356!3d-6.9308176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684900182cdf6b%3A0x543907e27b276290!2sattirebynauli_!5e0!3m2!1sen!2sid!4v1" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>NAULI ATTIRE</h3>
-                    <p>Kebaya Premium Harga Affordable</p>
-                </div>
-                <div class="footer-links">
+            <div class="footer-inner">
+                <div class="footer-brand"><span class="footer-logo">NAULI ATTIRE</span><p>Kebaya Premium · Harga Affordable<br>Kota Sukabumi</p></div>
+                <nav class="footer-nav">
                     <a href="#home">Beranda</a>
-                    <a href="#collection">Koleksi</a>
-                    <a href="#series">Series</a>
+                    <a href="#bestseller">Terlaris</a>                    
+                    <a href="#collection">Series</a>
+                    <a href="#series">Katalog</a>
+                    <a href="#syarat">Ketentuan</a>
                     <a href="#contact">Kontak</a>
-                </div>
+                </nav>
                 <div class="footer-social">
-                    <a href="https://wa.me/6287777812020" target="_blank" aria-label="WhatsApp">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/Attirebynauli_" target="_blank" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
+                    <a href="https://wa.me/6287777812020" target="_blank" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    <a href="https://instagram.com/Attirebynauli_" target="_blank" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Nauli Attire. All rights reserved.</p>
-            </div>
+            <div class="footer-bottom"><span>&copy; 2024 Nauli Attire. All rights reserved.</span></div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6287777812020" class="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+    <a href="https://wa.me/6287777812020" class="wa-float" target="_blank" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <!-- Modal Detail Warna -->
-    <div class="modal-overlay" id="colorModal">
-        <div class="modal-container">
-            <button class="modal-close" id="modalClose">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-content">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="">
+    <!-- DETAIL MODAL -->
+    <div class="modal-bg" id="detailModal">
+        <div class="modal-box">
+            <button class="modal-x" id="modalClose">&times;</button>
+            <div class="modal-top">
+                <div class="modal-img-col">
+                    <img id="modalImg" src="" alt="">
                 </div>
-                <div class="modal-details">
-                    <span class="modal-series" id="modalSeries"></span>
-                    <h2 class="modal-color-name" id="modalColorName"></h2>
+                <div class="modal-info-col">
+                    <span class="modal-badge" id="modalSeries"></span>
+                    <h2 class="modal-title" id="modalColor"></h2>
                     <p class="modal-price" id="modalPrice"></p>
-                    <div class="modal-package">
-                        <h3>Paket Termasuk:</h3>
-                        <ul id="modalPackageList"></ul>
+                    <div class="modal-pkg">
+                        <p class="pkg-label">Paket Termasuk:</p>
+                        <ul id="modalPkg"></ul>
                     </div>
-                    <div class="modal-actions">
-                        <!-- Tombol kalender: href & onclick diisi otomatis oleh script.js -->
-                        <a href="#" class="modal-btn modal-btn-calendar">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                            Cek Ketersediaan Tanggal
-                        </a>
-                        <a href="https://wa.me/6287777812020" class="modal-btn modal-btn-whatsapp" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
+                    <div class="modal-btns">
+                        <button class="mbtn mbtn-cal" id="btnKalender">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Cek Tanggal
+                        </button>
+                        <a href="https://wa.me/6287777812020" class="mbtn mbtn-wa" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             Booking via WhatsApp
                         </a>
                     </div>
                 </div>
             </div>
+
+            <div class="modal-customer" id="modalCustomer">
+                <div class="mc-header">
+                    <span class="mc-label">✦ Foto Customer</span>
+                    <span class="mc-counter"><span id="mcCur">1</span> / <span id="mcTotal">5</span></span>
+                </div>
+                <div class="mc-viewer-wrap">
+                    <button class="mc-arrow mc-prev" id="mcPrev">&#8592;</button>
+                    <div class="mc-viewer" id="mcViewer">
+                        <img id="mcMainImg" src="" alt="Foto Customer">
+                        <div class="mc-placeholder" id="mcPlaceholder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>Foto customer belum tersedia</span>
+                        </div>
+                    </div>
+                    <button class="mc-arrow mc-next" id="mcNext">&#8594;</button>
+                </div>
+                <div class="mc-thumbs" id="mcThumbs"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Modal Kalender Google Calendar -->
-    <div id="modalKalender" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:10000; align-items:center; justify-content:center;">
-        <div style="background:#fff; border-radius:16px; padding:24px; max-width:880px; width:95%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-            <button onclick="tutupKalender()" style="position:absolute; top:12px; right:16px; font-size:22px; background:none; border:none; cursor:pointer; color:#888; line-height:1;">✕</button>
-            <h3 id="judulKalender" style="margin:0 0 14px; font-family:sans-serif; color:#333; padding-right:30px;"></h3>
-            <iframe id="iframeKalender" src="" style="border:0; border-radius:10px; width:100%; height:500px;" frameborder="0" scrolling="no"></iframe>
-            <p style="font-size:12px; color:#aaa; margin-top:8px;">🔒 Tanggal bertanda BOOKING = tidak tersedia (H-1, hari sewa, H+1)</p>
+    <!-- Calendar Modal -->
+    <div class="modal-bg" id="calModal">
+        <div class="modal-box modal-box-wide">
+            <button class="modal-x" id="calClose">&times;</button>
+            <h3 class="cal-title">Ketersediaan Tanggal</h3>
+            <iframe id="calFrame" src="" style="border:0;width:100%;height:460px;border-radius:8px;" frameborder="0"></iframe>
+            <p class="cal-note">Tanggal bertanda BOOKING = tidak tersedia (H-1, hari sewa, H+1)</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
