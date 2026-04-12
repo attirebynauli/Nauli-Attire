@@ -1,0 +1,508 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+
+  .faq-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .faq-brand {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-brand .label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 6px;
+  }
+
+  .faq-brand h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .faq-brand p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .faq-section {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    padding: 0 0 10px;
+    margin-bottom: 8px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .faq-item {
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 14px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .faq-q span.q-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .faq-q .arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--color-text-tertiary);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item.open .arrow {
+    transform: rotate(90deg);
+  }
+
+  .faq-a {
+    display: none;
+    padding: 0 0 14px;
+  }
+
+  .faq-item.open .faq-a {
+    display: block;
+  }
+
+  .faq-a p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+
+  .faq-a p:last-child { margin-bottom: 0; }
+
+  .faq-a .highlight {
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+
+  .faq-a ul {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0;
+  }
+
+  .faq-a ul li {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .faq-a ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-tertiary);
+  }
+
+  .cta-strip {
+    margin-top: 2.5rem;
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-strip .cta-text p:first-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+  }
+
+  .cta-strip .cta-text p:last-child {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  .cta-strip a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 8px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .cta-strip a:hover {
+    background: var(--color-background-primary);
+  }
+
+  .schema-note {
+    margin-top: 1.5rem;
+    padding: 12px 16px;
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    border-left: 2px solid var(--color-border-secondary);
+  }
+
+  .schema-note p {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-family: var(--font-mono);
+  }
+
+  .schema-note .schema-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    font-family: var(--font-sans);
+  }
+</style>
+
+<div class="faq-wrap">
+  <h2 class="sr-only">Halaman FAQ Nauli Attire — Sewa Kebaya Premium di Sukabumi</h2>
+
+  <div class="faq-brand">
+    <p class="label">Nauli Attire · Sukabumi</p>
+    <h1>Pertanyaan yang sering ditanyakan</h1>
+    <p>Informasi lengkap seputar sewa kebaya premium kami</p>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+
+    <p class="section-title">Umum & Layanan</p>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apa itu Nauli Attire dan layanan apa yang ditawarkan?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Nauli Attire adalah usaha sewa kebaya premium yang berlokasi di <span class="highlight">Kota Sukabumi, Jawa Barat</span>. Kami menyediakan lebih dari 20 pilihan warna kebaya full payet dari 6 series eksklusif — Edita, Calla, Shreya, Aurora, Elysian, dan Alanya — dengan harga yang terjangkau.</p>
+          <p>Layanan kami meliputi sewa kebaya, gratis laundry dan resize, fitting sebelum hari sewa, serta opsi pengiriman ke luar kota.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Di mana lokasi Nauli Attire?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Nauli Attire berlokasi di <span class="highlight">Kota Sukabumi, Jawa Barat</span>. Untuk alamat lengkap dan petunjuk arah, Anda bisa mencarinya melalui Google Maps dengan kata kunci <span class="highlight">"attirebynauli_"</span>, atau hubungi kami via WhatsApp di <span class="highlight">087777812020</span> untuk konfirmasi lokasi.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Berapa harga sewa kebaya di Nauli Attire?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Harga sewa kebaya kami bervariasi tergantung series yang dipilih:</p>
+          <ul>
+            <li>Edita, Calla, Shreya, Aurora: mulai <span class="highlight">Rp 350.000</span></li>
+            <li>Edita Emerald Blue & Alanya Creamy Nude / Butter Yellow: <span class="highlight">Rp 375.000</span></li>
+            <li>Elysian Series: mulai <span class="highlight">Rp 390.000</span></li>
+            <li>Alanya Blush Pink & Rose Gold: <span class="highlight">Rp 400.000</span></li>
+          </ul>
+          <p>Semua harga sudah termasuk gratis laundry dan resize. Biaya pengiriman ditanggung penyewa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apa saja series kebaya yang tersedia di Nauli Attire?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Kami memiliki 6 series eksklusif dengan total lebih dari 20 pilihan warna:</p>
+          <ul>
+            <li><span class="highlight">Edita Series</span> — 5 warna (Creamy Nude, Blush Pink, Nude Pink, Navy, Emerald Blue)</li>
+            <li><span class="highlight">Calla Series</span> — 4 warna (Caramel, Grey, Ice Blue, Maroon)</li>
+            <li><span class="highlight">Shreya Series</span> — 2 warna (Burgundy, Ice Blue)</li>
+            <li><span class="highlight">Aurora Series</span> — 1 warna (Mahogany)</li>
+            <li><span class="highlight">Elysian Series</span> — 3 warna (Baby Pink, Blue Denim, Mauve)</li>
+            <li><span class="highlight">Alanya Series</span> — 5 warna (Blush Pink, Butter Yellow, Creamy Nude, Rose Gold, Emerald)</li>
+          </ul>
+          <p>Semua kebaya menggunakan bahan full payet premium.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Section 2 -->
+  <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+
+    <p class="section-title">Pemesanan & Pembayaran</p>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Bagaimana cara menyewa kebaya di Nauli Attire?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ada 5 langkah mudah untuk menyewa kebaya di Nauli Attire:</p>
+          <ul>
+            <li><span class="highlight">Cek ketersediaan</span> — pilih kebaya dan cek tanggal via tombol "Cek Tanggal" di katalog</li>
+            <li><span class="highlight">Hubungi WhatsApp</span> — konfirmasi tanggal dan kebaya yang dipilih ke 087777812020</li>
+            <li><span class="highlight">Booking & DP</span> — bayar DP minimal Rp 100.000 untuk mengunci tanggal</li>
+            <li><span class="highlight">Pelunasan</span> — selesaikan sisa pembayaran paling lambat H-1 pengambilan</li>
+            <li><span class="highlight">Ambil atau dikirim</span> — ambil langsung atau dikirim ke alamat Anda</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Berapa DP yang harus dibayar untuk booking?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>DP minimal adalah <span class="highlight">Rp 100.000</span> untuk mengunci tanggal. Booking baru dikonfirmasi setelah DP diterima. Pembayaran dilakukan via transfer ke <span class="highlight">BCA a.n Indah Nauli Damanik</span>.</p>
+          <p>Penting: DP tidak dapat dikembalikan jika penyewa membatalkan pemesanan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Kapan batas waktu pelunasan?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Pelunasan 100% dilakukan paling lambat <span class="highlight">H-1 sebelum pengambilan</span>. Transfer hanya ke rekening BCA a.n Indah Nauli Damanik. Pembayaran ke rekening lain bukan tanggung jawab Nauli Attire.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah bisa memesan kebaya secara online dari luar kota?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ya, kami melayani penyewa dari luar kota. Untuk fitting, Anda bisa datang langsung ke gallery atau mengirimkan <span class="highlight">foto dan ukuran Lingkar Dada (LD)</span> via WhatsApp.</p>
+          <p>Pastikan kebaya tiba di tangan Anda <span class="highlight">H-1 sebelum hari pakai</span>, dan pengembalian untuk luar kota maksimal pukul <span class="highlight">12.00 WIB</span> di H+1.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Section 3 -->
+  <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+
+    <p class="section-title">Durasi, Pengambilan & Pengembalian</p>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Berapa lama masa sewa kebaya?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Masa sewa adalah <span class="highlight">3 hari</span>, yaitu:</p>
+          <ul>
+            <li><span class="highlight">H-1</span>: Pengambilan kebaya</li>
+            <li><span class="highlight">Hari H</span>: Hari pemakaian</li>
+            <li><span class="highlight">H+1</span>: Pengembalian kebaya</li>
+          </ul>
+          <p>Batas pengembalian: pukul 16.00 WIB untuk Kota Sukabumi, dan pukul 12.00 WIB untuk luar kota.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah ada layanan pengiriman kebaya ke rumah?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ya, kebaya bisa dikirimkan ke alamat Anda setelah pelunasan selesai. <span class="highlight">Biaya pengiriman sepenuhnya ditanggung oleh penyewa</span>, baik untuk pengiriman dari Nauli Attire maupun pengembalian kebaya.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Bisakah jadwal sewa diubah setelah booking?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Perubahan jadwal diperbolehkan <span class="highlight">maksimal 1 kali</span> dengan menyertakan surat keterangan resmi. Ketersediaan unit pada jadwal baru mengikuti stok yang ada. Hubungi kami secepatnya via WhatsApp jika perlu reschedule.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Section 4 -->
+  <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+
+    <p class="section-title">Fitting, Ukuran & Perawatan</p>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah tersedia layanan fitting sebelum hari sewa?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ya, fitting sangat disarankan sebelum tanggal sewa. Anda bisa datang langsung ke gallery kami di Kota Sukabumi. Untuk penyewa luar kota, fitting bisa dilakukan dengan mengirimkan <span class="highlight">foto dan ukuran Lingkar Dada (LD)</span> via WhatsApp.</p>
+          <p>Permintaan resize harus dikonfirmasi minimal <span class="highlight">3 hari sebelum</span> tanggal sewa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah laundry dan resize sudah termasuk dalam harga sewa?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ya! Gratis laundry dan gratis resize sudah termasuk dalam semua paket sewa. Namun, dilarang keras mencuci atau meresize kebaya sendiri tanpa izin dari Nauli Attire, karena dapat merusak kain dan payet kebaya.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apa yang terjadi jika kebaya rusak atau hilang selama masa sewa?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Penyewa bertanggung jawab penuh atas kondisi kebaya selama masa sewa. Kerusakan atau kehilangan dikenakan <span class="highlight">ganti rugi sebesar 2× harga sewa</span>. Noda berat yang tidak bisa dibersihkan (seperti cat atau tinta permanen) juga termasuk kategori kerusakan.</p>
+          <p>Catatan: dilarang menggunakan <span class="highlight">hairspray</span> pada kerudung yang disewa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah perlu menyerahkan KTP saat menyewa?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Ya, penyewa wajib menyertakan <span class="highlight">foto KTP asli</span> saat melakukan pemesanan. Data KTP akan dihapus setelah kebaya dikembalikan dalam kondisi baik tanpa kerusakan.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Section 5 -->
+  <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+
+    <p class="section-title">Kontak & Media Sosial</p>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Bagaimana cara menghubungi Nauli Attire?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Anda bisa menghubungi kami melalui:</p>
+          <ul>
+            <li><span class="highlight">WhatsApp</span>: 087777812020 (untuk booking dan pertanyaan)</li>
+            <li><span class="highlight">Instagram</span>: @Attirebynauli_</li>
+            <li><span class="highlight">Google Maps</span>: cari "attirebynauli_" untuk petunjuk arah</li>
+          </ul>
+          <p>Semua booking hanya dilayani melalui WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="q-text" itemprop="name">Apakah Nauli Attire cocok untuk wisuda, pernikahan, atau acara adat?</span>
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          <p>Sangat cocok! Koleksi kebaya premium full payet Nauli Attire dirancang untuk berbagai momen spesial seperti <span class="highlight">wisuda, pernikahan, siraman, lamaran, pengajian, hingga acara adat</span>. Dengan lebih dari 20 pilihan warna, tersedia pilihan yang sesuai untuk berbagai tema dan acara.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-strip">
+    <div class="cta-text">
+      <p>Masih ada pertanyaan?</p>
+      <p>Tim kami siap membantu via WhatsApp setiap hari</p>
+    </div>
+    <a href="https://wa.me/6287777812020" target="_blank">Chat WhatsApp</a>
+  </div>
+
+  <div class="schema-note">
+    <p class="schema-title">Schema.org FAQ markup</p>
+    <p>Halaman ini menggunakan markup <code>schema.org/FAQPage</code> & <code>schema.org/Question</code> yang terstruktur, sehingga Google, AI Overview, Bing, dan mesin pencari lainnya dapat mendeteksi, memahami, dan menampilkan FAQ ini secara langsung di hasil pencarian (rich results).</p>
+  </div>
+</div>
+
+<script>
+function toggle(btn) {
+  const item = btn.closest('.faq-item');
+  item.classList.toggle('open');
+}
+</script>
