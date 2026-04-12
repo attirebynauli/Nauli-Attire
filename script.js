@@ -269,3 +269,8 @@ function closeCalModal() {
     document.getElementById('calModal')?.classList.remove('open');
     document.getElementById('calFrame').src = '';
 }
+
+function faqToggle(btn) {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+    }
