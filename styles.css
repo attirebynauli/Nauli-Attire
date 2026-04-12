@@ -996,3 +996,220 @@ ul { list-style:none; }
 .contact-card.reveal {
   transform: translateY(30px);
 }
+
+/* =============================================
+   FAQ SECTION
+   ============================================= */
+#faq.syarat-section {
+    background: var(--bg2);
+    border-top: 1px solid var(--border2);
+    border-bottom: 1px solid var(--border2);
+}
+
+#faq .syarat-grid {
+    display: block;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.faq-section-label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.6;
+    padding: 32px 0 12px;
+    border-bottom: 1px solid var(--border2);
+    margin-bottom: 0;
+}
+
+.faq-section-label:first-child {
+    padding-top: 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border2);
+    transition: var(--trans);
+}
+
+.faq-item:last-of-type {
+    border-bottom: none;
+}
+
+.faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 22px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    transition: var(--trans);
+}
+
+.faq-q:hover .faq-q-text {
+    color: var(--gold);
+}
+
+.faq-q-text {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.5;
+    flex: 1;
+    transition: var(--trans);
+}
+
+.faq-arrow {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: var(--gold);
+    opacity: 0.4;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.faq-item.open .faq-arrow {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 24px 0;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+    animation: faqOpen 0.3s ease forwards;
+}
+
+@keyframes faqOpen {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.faq-answer p {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.85;
+    margin-bottom: 10px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer p strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faq-answer ul li {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.8;
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid var(--border2);
+    position: relative;
+}
+
+.faq-answer ul li:last-child {
+    border-bottom: none;
+}
+
+.faq-answer ul li::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+.faq-answer ul li strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Hover state per item */
+.faq-item:hover {
+    background: rgba(200, 169, 107, 0.02);
+}
+
+.faq-item.open {
+    background: rgba(200, 169, 107, 0.03);
+}
+
+.faq-item.open .faq-q-text {
+    color: var(--gold);
+}
+
+/* ── FAQ RESPONSIVE ── */
+@media (max-width: 768px) {
+    #faq .syarat-grid {
+        max-width: 100%;
+    }
+
+    .faq-q-text {
+        font-size: 0.97rem;
+    }
+
+    .faq-q {
+        padding: 18px 0;
+    }
+
+    .faq-answer p,
+    .faq-answer ul li {
+        font-size: 0.88rem;
+    }
+
+    .faq-section-label {
+        padding: 28px 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-q-text {
+        font-size: 0.92rem;
+    }
+
+    .faq-q {
+        padding: 16px 0;
+        gap: 14px;
+    }
+
+    .faq-answer p,
+    .faq-answer ul li {
+        font-size: 0.85rem;
+    }
+
+    .faq-arrow {
+        width: 16px;
+        height: 16px;
+    }
+}
