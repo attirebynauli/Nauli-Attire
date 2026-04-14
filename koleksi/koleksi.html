@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Koleksi — Nauli Attire</title>
+    <meta name="description" content="Semua koleksi kebaya premium di Nauli Attire Sukabumi. 6 Series eksklusif, full payet, free laundry & resize.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../nauli-attire.css">
+
+    <style>
+        /* ── KOLEKSI PAGE EXCLUSIVE STYLES ── */
+
+        /* Hero */
+        .koleksi-hero {
+            background: var(--black);
+            padding: calc(var(--tb-h) + var(--nav-h) + 56px) var(--px) 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .koleksi-hero { padding: calc(var(--tb-h) + var(--nav-h) + 72px) var(--px-md) 80px; }
+        }
+        .koleksi-hero::before {
+            content: 'KOLEKSI';
+            position: absolute;
+            right: -0.02em;
+            bottom: -0.15em;
+            font-family: var(--fd);
+            font-size: clamp(5rem, 18vw, 16rem);
+            color: rgba(255,255,255,.03);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+        }
+        .koleksi-hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .koleksi-hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--fc);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,.35);
+            margin-bottom: 28px;
+        }
+        .koleksi-hero-breadcrumb a { color: rgba(255,255,255,.35); transition: color var(--tr); }
+        .koleksi-hero-breadcrumb a:hover { color: rgba(255,255,255,.75); }
+        .koleksi-hero-breadcrumb span { color: rgba(255,255,255,.15); }
+        .koleksi-hero-title {
+            font-family: var(--fd);
+            font-size: clamp(3.5rem, 12vw, 8rem);
+            line-height: .88;
+            color: var(--white);
+            letter-spacing: .02em;
+            margin-bottom: 20px;
+        }
+        .koleksi-hero-title em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: rgba(255,255,255,.55);
+            font-size: .65em;
+            display: block;
+            letter-spacing: .04em;
+            font-weight: 400;
+        }
+        .koleksi-hero-sub {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .koleksi-hero-pill {
+            font-family: var(--fc);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--black);
+            background: var(--white);
+            padding: 5px 14px;
+            border-radius: 100px;
+        }
+        .koleksi-hero-note {
+            font-family: var(--fc);
+            font-size: .85rem;
+            font-weight: 400;
+            letter-spacing: .08em;
+            color: rgba(255,255,255,.45);
+        }
+
+        /* Filter bar */
+        .filter-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--g200);
+            padding: 0 var(--px);
+            position: sticky;
+            top: calc(var(--tb-h) + var(--nav-h));
+            z-index: 500;
+        }
+        @media (min-width: 768px) { .filter-bar { padding: 0 var(--px-md); } }
+        .filter-bar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .filter-bar-inner::-webkit-scrollbar { display: none; }
+        .filter-btn {
+            flex-shrink: 0;
+            font-family: var(--fc);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--g400);
+            padding: 14px 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: color var(--tr), border-color var(--tr);
+            white-space: nowrap;
+        }
+        .filter-btn:hover { color: var(--black); }
+        .filter-btn.active { color: var(--black); border-bottom-color: var(--black); }
+
+        /* Main grid section */
+        .grid-section {
+            background: var(--white);
+            padding: 52px 0 100px;
+        }
+        .grid-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--px);
+        }
+        @media (min-width: 768px) { .grid-inner { padding: 0 var(--px-md); } }
+        @media (min-width: 1200px) { .grid-inner { padding: 0 var(--px-lg); } }
+
+        /* Series block */
+        .series-block {
+            margin-bottom: 64px;
+        }
+        .series-block.hidden { display: none; }
+        .series-block:last-child { margin-bottom: 0; }
+
+        .series-block-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--g200);
+            flex-wrap: wrap;
+        }
+        .sbh-left {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+        }
+        .sbh-num {
+            font-family: var(--fd);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--g200);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .sbh-name {
+            font-family: var(--fd);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            letter-spacing: .04em;
+            color: var(--black);
+            line-height: 1;
+        }
+        .sbh-count {
+            font-family: var(--fc);
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            background: var(--g100);
+            color: var(--g600);
+            padding: 4px 12px;
+            border-radius: 100px;
+            border: 1px solid var(--g200);
+            white-space: nowrap;
+            align-self: center;
+        }
+        .sbh-link {
+            font-family: var(--fc);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--g600);
+            text-decoration: none;
+            transition: color var(--tr);
+            white-space: nowrap;
+            align-self: center;
+        }
+        .sbh-link:hover { color: var(--black); }
+
+        /* Portrait product grid */
+        .portrait-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        @media (min-width: 480px)  { .portrait-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+        @media (min-width: 768px)  { .portrait-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+        @media (min-width: 1100px) { .portrait-grid { grid-template-columns: repeat(5, 1fr); gap: 20px; } }
+        @media (min-width: 1400px) { .portrait-grid { grid-template-columns: repeat(6, 1fr); } }
+
+        /* Portrait card */
+        .pcard {
+            cursor: pointer;
+            transition: transform var(--tr);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .pcard:hover { transform: translateY(-5px); }
+        .pcard:active { transform: scale(.98); }
+        .pcard-img {
+            position: relative;
+            overflow: hidden;
+            background: var(--g100);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            aspect-ratio: 3/4;
+        }
+        .pcard-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform .55s ease;
+        }
+        .pcard:hover .pcard-img img { transform: scale(1.07); }
+        .pcard-series-tag {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-family: var(--fc);
+            font-size: .6rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            background: rgba(255,255,255,.92);
+            color: var(--black);
+            padding: 3px 8px;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+        .pcard-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.35) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+        .pcard:hover .pcard-overlay { opacity: 1; }
+        .pcard-hover-cta {
+            position: absolute;
+            bottom: 44px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            opacity: 0;
+            transition: opacity .3s ease, transform .3s ease;
+            font-family: var(--fc);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--white);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .pcard:hover .pcard-hover-cta {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        .pcard-info { padding: 0 2px; }
+        .pcard-name {
+            font-family: var(--fc);
+            font-size: .95rem;
+            font-weight: 700;
+            letter-spacing: .03em;
+            color: var(--black);
+            margin-bottom: 2px;
+        }
+        .pcard-price {
+            font-family: var(--fb);
+            font-size: .83rem;
+            font-weight: 400;
+            color: var(--g600);
+        }
+
+        /* Empty state */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 56px 24px;
+            color: var(--g400);
+            font-family: var(--fc);
+            font-size: .85rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <span>GRATIS LAUNDRY &amp; RESIZE — UNTUK SETIAP SEWA</span>
+    <span class="topbar-sep">|</span>
+    <a href="https://wa.me/6287777812020" target="_blank" rel="noopener">BOOKING SEKARANG →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="../index.html" class="logo">NAULI<span>ATTIRE</span></a>
+        <ul class="nav-links">
+            <li class="nav-dropdown-wrap">
+                <a href="#" class="nav-a nav-dropdown-trigger">Koleksi <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="nav-dropdown">
+                    <a href="edita.html" class="nav-drop-item"><span class="nd-num">01</span>Edita Series</a>
+                    <a href="calla.html" class="nav-drop-item"><span class="nd-num">02</span>Calla Series</a>
+                    <a href="shreya.html" class="nav-drop-item"><span class="nd-num">03</span>Shreya Series</a>
+                    <a href="aurora.html" class="nav-drop-item"><span class="nd-num">04</span>Aurora Series</a>
+                    <a href="elysian.html" class="nav-drop-item"><span class="nd-num">05</span>Elysian Series</a>
+                    <a href="alanya.html" class="nav-drop-item"><span class="nd-num">06</span>Alanya Series</a>
+                    <div class="nd-divider"></div>
+                    <a href="koleksi.html" class="nav-drop-item nd-all">Lihat Semua →</a>
+                </div>
+            </li>
+            <li><a href="../index.html#cara-sewa" class="nav-a">Cara Sewa</a></li>
+            <li><a href="../index.html#syarat" class="nav-a">S&amp;K</a></li>
+            <li><a href="../index.html#faq" class="nav-a">FAQ</a></li>
+            <li><a href="../index.html#kontak" class="nav-a">Kontak</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="https://wa.me/6287777812020" class="nav-cta" target="_blank" rel="noopener">Booking</a>
+            <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="koleksi.html" class="mm-link">Semua Koleksi</a></li>
+            <li><a href="edita.html" class="mm-link">01 · Edita Series</a></li>
+            <li><a href="calla.html" class="mm-link">02 · Calla Series</a></li>
+            <li><a href="shreya.html" class="mm-link">03 · Shreya Series</a></li>
+            <li><a href="aurora.html" class="mm-link">04 · Aurora Series</a></li>
+            <li><a href="elysian.html" class="mm-link">05 · Elysian Series</a></li>
+            <li><a href="alanya.html" class="mm-link">06 · Alanya Series</a></li>
+            <li><a href="../index.html#cara-sewa" class="mm-link">Cara Sewa</a></li>
+            <li><a href="../index.html#syarat" class="mm-link">Syarat &amp; Ketentuan</a></li>
+            <li><a href="../index.html#faq" class="mm-link">FAQ</a></li>
+            <li><a href="../index.html#kontak" class="mm-link">Kontak</a></li>
+        </ul>
+        <a href="https://wa.me/6287777812020" class="mm-cta" target="_blank" rel="noopener">Booking via WhatsApp</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="koleksi-hero">
+    <div class="koleksi-hero-inner">
+        <div class="koleksi-hero-breadcrumb">
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <span style="color:rgba(255,255,255,.6)">Koleksi</span>
+        </div>
+        <h1 class="koleksi-hero-title">KATALOG</h1>
+        <div class="koleksi-hero-sub">
+            <span class="koleksi-hero-pill">6 Series Eksklusif</span>
+            <span class="koleksi-hero-note">Full Payet · Free Laundry · Free Resize</span>
+        </div>
+    </div>
+</section>
+
+<!-- BACK STRIP -->
+<div class="back-strip">
+    <div class="back-strip-left">
+        <a href="../index.html">← Beranda</a>
+    </div>
+</div>
+
+<!-- MAIN GRID -->
+<section class="grid-section">
+    <div class="grid-inner">
+
+        <!-- ── EDITA SERIES ── -->
+        <div class="series-block" id="edita" data-series="edita">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">01</span>
+                    <span class="sbh-name">EDITA SERIES</span>
+                </div>
+                <span class="sbh-count">5 Warna</span>
+                <a href="edita.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Edita Series" data-color-name="Creamy Nude" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="../image/edita/edita-creamy-nude.png" data-photos='["../image/customer-foto/creamy-nude/creamy-nude.jpeg","../image/customer-foto/creamy-nude/creamy-nude2.jpeg","../image/customer-foto/creamy-nude/creamy-nude1.jpeg","../image/customer-foto/creamy-nude/creamy-nude3.jpeg","../image/customer-foto/creamy-nude/creamy-nude4.jpeg"]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-creamy-nude.png" alt="Edita Creamy Nude" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Edita</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Creamy Nude</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Edita Series" data-color-name="Blush Pink" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil + Free laundry + Free Resize" data-image="../image/edita/edita-blush-pink.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-blush-pink.png" alt="Edita Blush Pink" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Edita</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Blush Pink</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Edita Series" data-color-name="Nude Pink" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/edita/edita-nude-pink.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-nude-pink.png" alt="Edita Nude Pink" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Edita</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Nude Pink</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Edita Series" data-color-name="Navy" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/edita/edita-navy.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-navy.png" alt="Edita Navy" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Edita</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Navy</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Edita Series" data-color-name="Emerald Blue" data-price="Rp 375.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/edita/edita-emerald-blue.jpeg" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-emerald-blue.jpeg" alt="Edita Emerald Blue" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Edita</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Emerald Blue</p>
+                        <p class="pcard-price">Rp 375.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── CALLA SERIES ── -->
+        <div class="series-block" id="calla" data-series="calla">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">02</span>
+                    <span class="sbh-name">CALLA SERIES</span>
+                </div>
+                <span class="sbh-count">4 Warna</span>
+                <a href="calla.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Calla Series" data-color-name="Caramel" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="../image/calla/calla-caramel.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/calla/calla-caramel.png" alt="Calla Caramel" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Calla</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Caramel</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Calla Series" data-color-name="Grey" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="../image/calla/calla-grey.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/calla/calla-grey.png" alt="Calla Grey" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Calla</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Grey</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Calla Series" data-color-name="Ice Blue" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil/Ceruti Lepas Pasang + Free laundry + Free Resize" data-image="../image/calla/calla-ice-blue.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/calla/calla-ice-blue.png" alt="Calla Ice Blue" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Calla</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Ice Blue</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Calla Series" data-color-name="Maroon" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/calla/calla-maroon.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/calla/calla-maroon.png" alt="Calla Maroon" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Calla</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Maroon</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── SHREYA SERIES ── -->
+        <div class="series-block" id="shreya" data-series="shreya">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">03</span>
+                    <span class="sbh-name">SHREYA SERIES</span>
+                </div>
+                <span class="sbh-count">2 Warna</span>
+                <a href="shreya.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Shreya Series" data-color-name="Burgundy" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/shreya/shreya-burgundy.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/shreya/shreya-burgundy.png" alt="Shreya Burgundy" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Shreya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Burgundy</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Shreya Series" data-color-name="Ice Blue" data-price="Rp 350.000" data-package="LD 98 max 105 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/shreya/shreya-ice-blue.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/shreya/shreya-ice-blue.png" alt="Shreya Ice Blue" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Shreya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Ice Blue</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── AURORA SERIES ── -->
+        <div class="series-block" id="aurora" data-series="aurora">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">04</span>
+                    <span class="sbh-name">AURORA SERIES</span>
+                </div>
+                <span class="sbh-count">1 Warna</span>
+                <a href="aurora.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Aurora Series" data-color-name="Mahogany" data-price="Rp 350.000" data-package="LD 120 max 125 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/aurora/Mahogany.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/aurora/Mahogany.png" alt="Aurora Mahogany" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Aurora</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Mahogany</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── ELYSIAN SERIES ── -->
+        <div class="series-block" id="elysian" data-series="elysian">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">05</span>
+                    <span class="sbh-name">ELYSIAN SERIES</span>
+                </div>
+                <span class="sbh-count">3 Warna</span>
+                <a href="elysian.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Elysian Series" data-color-name="Baby Pink" data-price="Rp 390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/elysian/elysian-baby-pink.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/elysian/elysian-baby-pink.png" alt="Elysian Baby Pink" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Elysian</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Baby Pink</p>
+                        <p class="pcard-price">Rp 390.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Elysian Series" data-color-name="Blue Denim" data-price="Rp 390.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/elysian/elysian-denim.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/elysian/elysian-denim.png" alt="Elysian Blue Denim" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Elysian</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Blue Denim</p>
+                        <p class="pcard-price">Rp 390.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Elysian Series" data-color-name="Mauve" data-price="Rp 350.000" data-package="LD 100 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/edita/edita-mauve.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/edita/edita-mauve.png" alt="Elysian Mauve" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Elysian</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Mauve</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── ALANYA SERIES ── -->
+        <div class="series-block" id="alanya" data-series="alanya">
+            <div class="series-block-header">
+                <div class="sbh-left">
+                    <span class="sbh-num">06</span>
+                    <span class="sbh-name">ALANYA SERIES</span>
+                </div>
+                <span class="sbh-count">5 Warna</span>
+                <a href="alanya.html" class="sbh-link">Lihat Series →</a>
+            </div>
+            <div class="portrait-grid">
+                <div class="pcard" data-series="Alanya Series" data-color-name="Blush Pink" data-price="Rp 400.000" data-package="LD 94 max 98 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/alanya/alanya-blush-pink.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/alanya/alanya-blush-pink.png" alt="Alanya Blush Pink" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Alanya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Blush Pink</p>
+                        <p class="pcard-price">Rp 400.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Alanya Series" data-color-name="Butter Yellow" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/alanya/alanya-butter-yellow.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/alanya/alanya-butter-yellow.png" alt="Alanya Butter Yellow" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Alanya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Butter Yellow</p>
+                        <p class="pcard-price">Rp 375.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Alanya Series" data-color-name="Creamy Nude" data-price="Rp 375.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/alanya/alanya-creamy-nude.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/alanya/alanya-creamy-nude.png" alt="Alanya Creamy Nude" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Alanya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Creamy Nude</p>
+                        <p class="pcard-price">Rp 375.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Alanya Series" data-color-name="Rose Gold" data-price="Rp 400.000" data-package="LD 92 max 97 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/alanya/alanya-rosegold.jpeg" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/alanya/alanya-rosegold.jpeg" alt="Alanya Rose Gold" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Alanya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Rose Gold</p>
+                        <p class="pcard-price">Rp 400.000</p>
+                    </div>
+                </div>
+                <div class="pcard" data-series="Alanya Series" data-color-name="Emerald" data-price="Rp 350.000" data-package="LD 110 max 115 + Kebaya Full Payet + Rok Songket + Hijab + Manset + Long torso + Ciput Tile + Veil Lepas Pasang + Free laundry + Free Resize" data-image="../image/alanya/alanya-emerald.png" data-photos='["","","","",""]'>
+                    <div class="pcard-img">
+                        <img src="../image/alanya/alanya-emerald.png" alt="Alanya Emerald" loading="lazy">
+                        <div class="pcard-overlay"></div>
+                        <span class="pcard-series-tag">Alanya</span>
+                        <span class="pcard-hover-cta">Lihat Detail</span>
+                    </div>
+                    <div class="pcard-info">
+                        <p class="pcard-name">Emerald</p>
+                        <p class="pcard-price">Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MOBILE BOTTOM ACTION BAR -->
+<div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="../index.html" class="mbb-btn mbb-outline">BERANDA</a>
+    <a href="https://wa.me/6287777812020" class="mbb-btn mbb-solid" target="_blank" rel="noopener">BOOKING WA</a>
+</div>
+
+<!-- PRODUCT DETAIL MODAL -->
+<div class="modal-overlay" id="detailModal" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+        <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
+        <div class="modal-layout">
+            <div class="modal-img-side"><img id="modalImg" src="" alt=""></div>
+            <div class="modal-info-side">
+                <p class="modal-badge" id="modalSeries"></p>
+                <h2 class="modal-product-name" id="modalColor"></h2>
+                <p class="modal-product-price" id="modalPrice"></p>
+                <div class="modal-divider"></div>
+                <p class="modal-pkg-label">PAKET TERMASUK</p>
+                <ul class="modal-pkg-list" id="modalPkg"></ul>
+                <div class="modal-actions">
+                    <button class="modal-btn-cal" id="btnKalender">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        CEK KETERSEDIAAN
+                    </button>
+                    <a href="https://wa.me/6287777812020" class="modal-btn-wa" target="_blank" rel="noopener">BOOKING VIA WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-customer" id="modalCustomer">
+            <div class="mc-header"><span class="mc-title">FOTO CUSTOMER</span><span class="mc-counter"><span id="mcCur">1</span>/<span id="mcTotal">5</span></span></div>
+            <div class="mc-viewer-wrap">
+                <button class="mc-arrow mc-prev" id="mcPrev" aria-label="Sebelumnya">‹</button>
+                <div class="mc-viewer" id="mcViewer">
+                    <img id="mcMainImg" src="" alt="Foto Customer">
+                    <div class="mc-placeholder" id="mcPlaceholder"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto belum tersedia</span></div>
+                </div>
+                <button class="mc-arrow mc-next" id="mcNext" aria-label="Berikutnya">›</button>
+            </div>
+            <div class="mc-thumbs" id="mcThumbs"></div>
+        </div>
+    </div>
+</div>
+
+<!-- CALENDAR MODAL -->
+<div class="modal-overlay" id="calModal" role="dialog" aria-modal="true">
+    <div class="modal-panel modal-panel-cal">
+        <button class="modal-close" id="calClose" aria-label="Tutup">×</button>
+        <h3 class="cal-title">KETERSEDIAAN TANGGAL</h3>
+        <iframe id="calFrame" src="" style="border:0;width:100%;height:420px;border-radius:4px;" frameborder="0" title="Kalender Ketersediaan"></iframe>
+        <p class="cal-note">Tanggal bertanda BOOKING = tidak tersedia (H-1, hari sewa, H+1)</p>
+    </div>
+</div>
+
+<script src="../script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Standard inits
+    initNavbar && initNavbar();
+    initMobileMenu && initMobileMenu();
+    initReveal && initReveal();
+    initModalClose && initModalClose();
+    initCustomerSlideshow && initCustomerSlideshow();
+    initMobileBottomBar && initMobileBottomBar();
+
+    // Wire up portrait cards (same as product-card logic)
+    document.querySelectorAll('.pcard').forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+
+    // Filter bar logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const seriesBlocks = document.querySelectorAll('.series-block');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            seriesBlocks.forEach(block => {
+                if (filter === 'all' || block.dataset.series === filter) {
+                    block.classList.remove('hidden');
+                } else {
+                    block.classList.add('hidden');
+                }
+            });
+
+            // Scroll to filtered section
+            if (filter !== 'all') {
+                const target = document.getElementById(filter);
+                if (target) {
+                    const offset = (document.querySelector('.navbar')?.offsetHeight || 56)
+                                 + (document.querySelector('.filter-bar')?.offsetHeight || 44)
+                                 + (document.querySelector('.back-strip')?.offsetHeight || 44)
+                                 + 20;
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.pageYOffset - offset,
+                            behavior: 'smooth'
+                        });
+                    }, 80);
+                }
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
