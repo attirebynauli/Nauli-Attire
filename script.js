@@ -70,40 +70,7 @@ function initNavDropdown() {
 }
 
 /* ── MOBILE MENU ── */
-function initMobileMenu() {
-    const btn     = document.getElementById('hamburger');
-    const overlay = document.getElementById('mobileOverlay');
-    if (!btn || !overlay) return;
-
-    const close = () => {
-        overlay.classList.remove('open');
-        btn.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
-    };
-
-    btn.addEventListener('click', () => {
-        const open = overlay.classList.toggle('open');
-        btn.classList.toggle('open', open);
-        btn.setAttribute('aria-expanded', String(open));
-        document.body.classList.toggle('no-scroll', open);
-    });
-
-    overlay.querySelectorAll('.mm-link, .mm-cta, .mm-series-item, .mm-all-link').forEach(a => a.addEventListener('click', close));
-    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-
-    // Mobile Menu Accordion Toggle
-    const mmAccordionWraps = document.querySelectorAll('.mm-accordion-wrap');
-    mmAccordionWraps.forEach(wrap => {
-        const trigger = wrap.querySelector('.mm-accordion-trigger');
-        if (trigger) {
-            trigger.addEventListener('click', () => {
-                wrap.classList.toggle('mm-open');
-            });
-        }
-    });
-}
+function initMobileMenu
 
 /* ── FILTER PILLS ── */
 function initFilterPills() {
