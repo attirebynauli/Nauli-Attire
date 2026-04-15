@@ -358,22 +358,34 @@
 </nav>
 
 <!-- MOBILE MENU -->
+<!-- MOBILE MENU -->
 <div class="mobile-overlay" id="mobileOverlay">
     <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href=".html" class="mm-link">Semua Katalog</a></li>
-            <li><a href="edita.html" class="mm-link">01 · Edita Series</a></li>
-            <li><a href="calla.html" class="mm-link">02 · Calla Series</a></li>
-            <li><a href="shreya.html" class="mm-link">03 · Shreya Series</a></li>
-            <li><a href="aurora.html" class="mm-link">04 · Aurora Series</a></li>
-            <li><a href="elysian.html" class="mm-link">05 · Elysian Series</a></li>
-            <li><a href="alanya.html" class="mm-link">06 · Alanya Series</a></li>
-            <li><a href="../index.html#cara-sewa" class="mm-link">Cara Sewa</a></li>
-            <li><a href="../index.html#syarat" class="mm-link">Syarat &amp; Ketentuan</a></li>
+        <div class="mm-accordion-wrap">
+            <button class="mm-accordion-trigger">Katalog <svg class="mm-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="mm-accordion-content">
+                <div class="mm-series-grid">
+                    <a href="edita.html" class="mm-series-item"><span class="mm-si-num">01</span><span class="mm-si-name">EDITA</span></a>
+                    <a href="calla.html" class="mm-series-item"><span class="mm-si-num">02</span><span class="mm-si-name">CALLA</span></a>
+                    <a href="shreya.html" class="mm-series-item"><span class="mm-si-num">03</span><span class="mm-si-name">SHREYA</span></a>
+                    <a href="aurora.html" class="mm-series-item"><span class="mm-si-num">04</span><span class="mm-si-name">AURORA</span></a>
+                    <a href="elysian.html" class="mm-series-item"><span class="mm-si-num">05</span><span class="mm-si-name">ELYSIAN</span></a>
+                    <a href="alanya.html" class="mm-series-item"><span class="mm-si-num">06</span><span class="mm-si-name">ALANYA</span></a>
+                </div>
+                <div style="text-align:center">
+                    <a href="koleksi.html" class="mm-all-link">Lihat Semua →</a>
+                </div>
+            </div>
+        </div>
+        <ul style="margin-top:15px; padding-top:15px; border-top:1px solid var(--g200); display:flex; flex-direction:column; gap:0;">
+            <li><a href="../index.html#cara-sewa" class="mm-link">Alur Sewa</a></li>
+            <li><a href="../index.html#syarat" class="mm-link">Syarat & Ketentuan</a></li>
             <li><a href="../index.html#faq" class="mm-link">FAQ</a></li>
             <li><a href="../index.html#kontak" class="mm-link">Kontak</a></li>
         </ul>
-        <a href="https://wa.me/6287777812020" class="mm-cta" target="_blank" rel="noopener">Booking via WhatsApp</a>
+        <a href="https://wa.me/6287777812020" class="mm-cta" target="_blank" rel="noopener">
+            Booking via WhatsApp
+        </a>
     </div>
 </div>
 
