@@ -26,32 +26,46 @@ function initNavbar() {
     }, { passive: true });
 }
 
-/* ── NAVBAR DROPDOWN (hover desktop + tap mobile) ── */
+/* ── NAVBAR DROPDOWN — ACCORDION TOGGLE ── */
 function initNavDropdown() {
     const wraps = document.querySelectorAll('.nav-dropdown-wrap');
     if (!wraps.length) return;
 
     wraps.forEach(wrap => {
-        const dropdown = wrap.querySelector('.nav-dropdown');
-        if (!dropdown) return;
+        const trigger = wrap.querySelector('.nav-dropdown-trigger');
+        if (!trigger) return;
 
-        // Tap on trigger area (not on links inside dropdown)
-        wrap.addEventListener('click', e => {
-            if (e.target.closest('.nav-drop-item')) return;
+        // Click/tap on trigger toggles accordion
+        trigger.addEventListener('click', e => {
+            e.preventDefault();
             e.stopPropagation();
             const isOpen = wrap.classList.contains('dd-open');
+            // Close all other accordions first
             wraps.forEach(w => w.classList.remove('dd-open'));
-            wrap.classList.toggle('dd-open', !isOpen);
+            // Toggle current
+            if (!isOpen) {
+                wrap.classList.add('dd-open');
+            }
         });
     });
 
-    // Close when clicking outside
-    document.addEventListener('click', () => {
-        wraps.forEach(w => w.classList.remove('dd-open'));
+    // Close accordion when clicking outside navbar
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.navbar')) {
+            wraps.forEach(w => w.classList.remove('dd-open'));
+        }
     });
 
+    // Close on Escape
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') wraps.forEach(w => w.classList.remove('dd-open'));
+    });
+
+    // Close accordion after selecting a dropdown link
+    document.querySelectorAll('.nav-drop-item').forEach(link => {
+        link.addEventListener('click', () => {
+            wraps.forEach(w => w.classList.remove('dd-open'));
+        });
     });
 }
 
@@ -75,9 +89,20 @@ function initMobileMenu() {
         document.body.classList.toggle('no-scroll', open);
     });
 
-    overlay.querySelectorAll('.mm-link, .mm-cta').forEach(a => a.addEventListener('click', close));
+    overlay.querySelectorAll('.mm-link, .mm-cta, .mm-series-item, .mm-all-link').forEach(a => a.addEventListener('click', close));
     overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+    // Mobile Menu Accordion Toggle
+    const mmAccordionWraps = document.querySelectorAll('.mm-accordion-wrap');
+    mmAccordionWraps.forEach(wrap => {
+        const trigger = wrap.querySelector('.mm-accordion-trigger');
+        if (trigger) {
+            trigger.addEventListener('click', () => {
+                wrap.classList.toggle('mm-open');
+            });
+        }
+    });
 }
 
 /* ── FILTER PILLS ── */
