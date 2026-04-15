@@ -665,7 +665,7 @@ ul { list-style:none; }
 .mc-arrow:hover { background:var(--black); color:var(--white); border-color:var(--black); }
 .mc-thumbs { display:flex; gap:7px; padding:12px 20px 0; overflow-x:auto; scrollbar-width:none; justify-content:center; }
 .mc-thumbs::-webkit-scrollbar { display:none; }
-.mc-thumb { width:52px; height:67px; object-fit:cover; object-position:center top; cursor:pointer; opacity:.4; border:1.5px solid transparent; border-radius:2px; transition:var(--tr); flex-shrink:0; }
+.mc-thumb { width:52px; height:67px; object-fit:cover; object-position:center bottom; cursor:pointer; opacity:.4; border:1.5px solid transparent; border-radius:2px; transition:var(--tr); flex-shrink:0; }
 .mc-thumb:hover { opacity:.7; } .mc-thumb.active { opacity:1; border-color:var(--black); }
 .mc-thumb-ph { width:52px; height:67px; flex-shrink:0; border-radius:2px; border:1.5px dashed var(--g200); background:var(--g100); display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:.4; transition:var(--tr); font-size:.6rem; color:var(--g400); text-align:center; }
 .mc-thumb-ph.active { opacity:.8; border-color:var(--black); }
