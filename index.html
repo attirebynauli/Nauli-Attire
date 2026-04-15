@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -20,50 +21,54 @@
       "image": "https://nauli-attire.vercel.app/image/edita/edita-creamy-nude.png",
       "url": "https://nauli-attire.vercel.app",
       "telephone": "+6287777812020",
-    
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jalan Ciandam, Kp. Sudajaya Gg. Seberang, Cibeureum Hilir",
-        "addressLocality": "Sukabumi",
-        "addressRegion": "Jawa Barat",
-        "postalCode": "43165",
-        "addressCountry": "ID"
-      },
-    
-      "priceRange": "Rp350.000 - Rp400.000",
-    
-      "description": "Sewa kebaya premium di Sukabumi dengan harga affordable, banyak pilihan warna, dan desain elegan.",
-    
-      "areaServed": {
-        "@type": "City",
-        "name": "Sukabumi"
-      },
-    
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-        ],
-        "opens": "09:00",
-        "closes": "21:00"
-      },
-    
-      "sameAs": [
-        "https://instagram.com/attirebynauli_"
-      ]
-    }
+
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jalan Ciandam, Kp. Sudajaya Gg. Seberang, Cibeureum Hilir",
+    "addressLocality": "Sukabumi",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "43165",
+    "addressCountry": "ID"
+  },
+
+  "priceRange": "Rp350.000 - Rp400.000",
+
+  "description": "Sewa kebaya premium di Sukabumi dengan harga affordable, banyak pilihan warna, dan desain elegan.",
+
+  "areaServed": {
+    "@type": "City",
+    "name": "Sukabumi"
+  },
+
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "21:00"
+  },
+
+  "sameAs": [
+    "https://instagram.com/attirebynauli_"
+  ]
+}
+
+
 </script>
-    
+
 </head>
 <body>
 
 <!-- NAVBAR -->
+
 <nav class="navbar" id="navbar">
     <div class="nav-inner">
         <a href="#home" class="logo">NAULI<span>ATTIRE</span></a>
         <ul class="nav-links">
             <li class="nav-dropdown-wrap">
-                <a href="/koleksi/koleksi.html" class="nav-a nav-dropdown-trigger">Katalog <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="koleksi/koleksi.html" class="nav-a nav-dropdown-trigger">Katalog <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 <div class="nav-dropdown">
                     <a href="koleksi/edita.html" class="nav-drop-item"><span class="nd-num">01</span>Edita Series</a>
                     <a href="koleksi/calla.html" class="nav-drop-item"><span class="nd-num">02</span>Calla Series</a>
@@ -90,11 +95,28 @@
 </nav>
 
 <!-- MOBILE MENU -->
+
 <div class="mobile-overlay" id="mobileOverlay">
     <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="koleksi/koleksi.html" class="mm-link">Katalog</a></li>
+        <div class="mm-accordion-wrap">
+            <button class="mm-accordion-trigger">Katalog <svg class="mm-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="mm-accordion-content">
+                <div class="mm-series-grid">
+                    <a href="koleksi/edita.html" class="mm-series-item"><span class="mm-si-num">01</span><span class="mm-si-name">EDITA</span></a>
+                    <a href="koleksi/calla.html" class="mm-series-item"><span class="mm-si-num">02</span><span class="mm-si-name">CALLA</span></a>
+                    <a href="koleksi/shreya.html" class="mm-series-item"><span class="mm-si-num">03</span><span class="mm-si-name">SHREYA</span></a>
+                    <a href="koleksi/aurora.html" class="mm-series-item"><span class="mm-si-num">04</span><span class="mm-si-name">AURORA</span></a>
+                    <a href="koleksi/elysian.html" class="mm-series-item"><span class="mm-si-num">05</span><span class="mm-si-name">ELYSIAN</span></a>
+                    <a href="koleksi/alanya.html" class="mm-series-item"><span class="mm-si-num">06</span><span class="mm-si-name">ALANYA</span></a>
+                </div>
+                <div style="text-align:center">
+                    <a href="koleksi/koleksi.html" class="mm-all-link">Lihat Semua →</a>
+                </div>
+            </div>
+        </div>
+        <ul style="margin-top:15px; padding-top:15px; border-top:1px solid var(--g200); display:flex; flex-direction:column; gap:0;">
             <li><a href="#cara-sewa" class="mm-link">Alur Sewa</a></li>
+            <li><a href="koleksi/size-guide.html" class="mm-link">Panduan Ukuran</a></li>
             <li><a href="#syarat" class="mm-link">Syarat & Ketentuan</a></li>
             <li><a href="#faq" class="mm-link">FAQ</a></li>
             <li><a href="#kontak" class="mm-link">Kontak</a></li>
@@ -105,7 +127,9 @@
     </div>
 </div>
 
+
 <!-- HERO -->
+
 <section id="home" class="hero">
     <div class="hero-bg">
         <div class="hero-slide active" style="background-image:url('image/edita/edita-creamy-nude.png')"></div>
@@ -130,8 +154,19 @@
     <div class="hero-scroll-hint" aria-hidden="true"><span></span><p>SCROLL</p></div>
 </section>
 
+<!-- STATS -->
+
+<section class="stats">
+    <div class="stats-grid">
+        <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Series Eksklusif</span></div>
+        <div class="stat-item"><span class="stat-num">20<sup>+</sup></span><span class="stat-label">Pilihan Warna</span></div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Full Payet</span></div>
+        <div class="stat-item"><span class="stat-num">FREE</span><span class="stat-label">Laundry & Resize</span></div>
+    </div>
+</section>
 
 <!-- BEST SELLER -->
+
 <section class="bestseller-section">
     <div class="bs-inner">
         <div class="bs-header">
@@ -202,22 +237,13 @@
             </div>
         </div>
         <div class="bs-cta">
-            <a href="koleksi/koleksi.html" class="btn-black">LIHAT SEMUA KOLEKSI →</a>
+            <a href="koleksi/koleksi.html" class="btn-black">LIHAT KATALOG →</a>
         </div>
     </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-    <div class="stats-grid">
-        <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Series Eksklusif</span></div>
-        <div class="stat-item"><span class="stat-num">20<sup>+</sup></span><span class="stat-label">Pilihan Warna</span></div>
-        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Full Payet</span></div>
-        <div class="stat-item"><span class="stat-num">FREE</span><span class="stat-label">Laundry & Resize</span></div>
-    </div>
-</section>
-
 <!-- CARA SEWA -->
+
 <section id="cara-sewa" class="cara-sewa">
     <div class="cs-inner">
         <div class="cs-header">
@@ -229,7 +255,7 @@
                 <div class="cs-num">01</div>
                 <div class="cs-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
                 <h4>CEK TANGGAL</h4>
-                <p>Pilih kebaya & cek ketersediaan via tombol "Cek Tanggal" di katalog.</p>
+                <p>Pilih kebaya & cek ketersediaan via <strong>"Cek Tanggal"</strong> di katalog.</p>
             </div>
             <div class="cs-connector" aria-hidden="true">→</div>
             <div class="cs-step">
@@ -243,7 +269,7 @@
                 <div class="cs-num">03</div>
                 <div class="cs-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
                 <h4>BAYAR DP</h4>
-                <p>DP minimal <strong>Rp 100.000</strong> ke BCA a.n Indah Nauli Damanik.</p>
+                <p>DP minimal <strong>Rp 100.000</strong> ke <strong> a.n Indah Nauli Damanik.</strong></p>
             </div>
             <div class="cs-connector" aria-hidden="true">→</div>
             <div class="cs-step">
@@ -267,6 +293,7 @@
 </section>
 
 <!-- SYARAT & KETENTUAN -->
+
 <section id="syarat" class="syarat-section">
     <div class="syarat-inner">
         <div class="syarat-header">
@@ -309,6 +336,7 @@
 </section>
 
 <!-- FAQ -->
+
 <section id="faq" class="faq-section">
     <div class="faq-inner">
         <div class="faq-left">
@@ -329,6 +357,7 @@
 </section>
 
 <!-- KONTAK -->
+
 <section id="kontak" class="kontak-section">
     <div class="kontak-inner">
         <div class="kontak-text">
@@ -338,18 +367,20 @@
         </div>
         <div class="kontak-cards">
             <a href="https://wa.me/6287777812020" class="kcard" target="_blank" rel="noopener"><div class="kcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><p class="kcard-label">WhatsApp</p><p class="kcard-val">087777812020</p><p class="kcard-act">Booking Sekarang →</p></div></a>
-            <a href="https://instagram.com/Attirebynauli_" class="kcard" target="_blank" rel="noopener"><div class="kcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div><div><p class="kcard-label">Instagram</p><p class="kcard-val">@Attirebynauli_</p><p class="kcard-act">Kunjungi Profil →</p></div></a>
+            <a href="https://instagram.com/Attirebynauli_" class="kcard" target="_blank" rel="noopener"><div class="kcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div><div><p class="kcard-label">Instagram</p><p class="kcard-val">@Attirebynauli</p><p class="kcard-act">Kunjungi Profil →</p></div></a>
             <a href="https://www.google.com/maps/place/attirebynauli_/" class="kcard" target="_blank" rel="noopener"><div class="kcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><p class="kcard-label">Lokasi</p><p class="kcard-val">Kota Sukabumi</p><p class="kcard-act">Lihat di Maps →</p></div></a>
         </div>
     </div>
 </section>
 
 <!-- MAP -->
+
 <div class="map-wrap">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8!2d106.9425356!3d-6.9308176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684900182cdf6b%3A0x543907e27b276290!2sattirebynauli_!5e0!3m2!1sen!2sid!4v1" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" title="Lokasi Nauli Attire"></iframe>
 </div>
 
 <!-- FOOTER -->
+
 <footer class="footer">
     <div class="footer-top">
         <div class="footer-brand">
@@ -359,9 +390,9 @@
         <div class="footer-cols">
             <div class="footer-col">
                 <p class="footer-col-title">KOLEKSI</p>
-                <a href="#edita">Edita Series</a><a href="#calla">Calla Series</a>
-                <a href="#shreya">Shreya Series</a><a href="#aurora">Aurora Series</a>
-                <a href="#elysian">Elysian Series</a><a href="#alanya">Alanya Series</a>
+                <a href="koleksi/edita.html">Edita Series</a><a href="koleksi/calla.html">Calla Series</a>
+                <a href="koleksi/shreya.html">Shreya Series</a><a href="koleksi/aurora.html">Aurora Series</a>
+                <a href="koleksi/elysian.html">Elysian Series</a><a href="koleksi/alanya.html">Alanya Series</a>
             </div>
             <div class="footer-col">
                 <p class="footer-col-title">INFO</p>
@@ -387,12 +418,14 @@
 </footer>
 
 <!-- MOBILE BOTTOM ACTION BAR (phone only) -->
+
 <div class="mobile-bottom-bar" id="mobileBottomBar">
     <a href="koleksi/koleksi.html" class="mbb-btn mbb-outline">LIHAT KATALOG</a>
     <a href="https://wa.me/6287777812020" class="mbb-btn mbb-solid" target="_blank" rel="noopener">BOOKING WA</a>
 </div>
 
 <!-- PRODUCT DETAIL MODAL -->
+
 <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="true">
     <div class="modal-panel">
         <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
@@ -430,6 +463,7 @@
 </div>
 
 <!-- CALENDAR MODAL -->
+
 <div class="modal-overlay" id="calModal" role="dialog" aria-modal="true">
     <div class="modal-panel modal-panel-cal">
         <button class="modal-close" id="calClose" aria-label="Tutup">×</button>
@@ -440,6 +474,8 @@
 </div>
 
 <script src="script.js"></script>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<script>document.addEventListener('DOMContentLoaded', function(){ var el = document.getElementById('yr'); if(el) el.textContent = new Date().getFullYear(); });</script>
+
 </body>
 </html>
