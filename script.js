@@ -350,6 +350,7 @@ const KALENDER_MAP = {
     'shreya-burgundy':      'aa68f11602f4299ef5fda5d4747c2ec4d027df00df475f5a21e300b193e92612@group.calendar.google.com',
     'shreya-ice-blue':      '219566b322fb300d396e11ec6196da34319f6a2a5b8867fcb4fe8aba4ca91b94@group.calendar.google.com',
 };
+
 function makeCalKey(series, colorName) {
     return (series.replace(/\s*series\s*/i, '').trim() + '-' + colorName)
         .toLowerCase().replace(/\s+/g, '-');
@@ -369,7 +370,7 @@ function openCal(key) {
 
     document.getElementById('detailModal').classList.remove('open');
     document.getElementById('calModal').classList.add('open');
-}
+
 
 function closeCalModal() {
     document.getElementById('calModal')?.classList.remove('open');
