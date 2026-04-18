@@ -249,7 +249,14 @@
     <div class="modal-panel modal-panel-cal">
         <button class="modal-close" id="calClose" aria-label="Tutup">×</button>
         <h3 class="cal-title">KETERSEDIAAN TANGGAL</h3>
-        <iframe id="calFrame" src="" style="border:0;width:100%;height:420px;border-radius:4px;" frameborder="0" title="Kalender Ketersediaan"></iframe>
+        <div id="calLinkWrap" style="text-align:center; padding: 40px 0;">
+            <p style="font-family:var(--fb); font-size:.95rem; color:var(--g600); margin-bottom:24px; line-height:1.7;">
+                Klik tombol di bawah untuk melihat kalender ketersediaan di Google Calendar.
+            </p>
+            <a id="calLink" href="#" target="_blank" rel="noopener" class="modal-btn-wa" style="display:inline-flex; text-decoration:none;">
+                🗓 BUKA KALENDER
+            </a>
+        </div>
         <p class="cal-note">Tanggal bertanda BOOKING = tidak tersedia (H-1, hari sewa, H+1)</p>
     </div>
 </div>
