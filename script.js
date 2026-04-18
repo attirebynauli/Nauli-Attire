@@ -175,9 +175,14 @@ function initSmoothScroll() {
     });
 }
 
-/* ── PRODUCT CARDS ── */
+/* ── PRODUCT CARDS (Mobile + Desktop) ── */
 function initProductCards() {
-    document.querySelectorAll('.product-card').forEach(card => {
+    // Mobile cards
+    document.querySelectorAll('.product-card, .bs-card, .pcard').forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+    // Desktop cards
+    document.querySelectorAll('.product-card-desktop').forEach(card => {
         card.addEventListener('click', () => openModal(card));
     });
 }
@@ -350,35 +355,21 @@ const KALENDER_MAP = {
     'shreya-burgundy':      'aa68f11602f4299ef5fda5d4747c2ec4d027df00df475f5a21e300b193e92612@group.calendar.google.com',
     'shreya-ice-blue':      '219566b322fb300d396e11ec6196da34319f6a2a5b8867fcb4fe8aba4ca91b94@group.calendar.google.com',
 };
-
 function makeCalKey(series, colorName) {
     return (series.replace(/\s*series\s*/i, '').trim() + '-' + colorName)
         .toLowerCase().replace(/\s+/g, '-');
 }
-
 function openCal(key) {
     const calId = KALENDER_MAP[key];
     if (!calId) return;
-
-    const url = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calId)}&ctz=Asia%2FJakarta&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
-
-    window.open(url, '_blank');
-}
-    // ✅ Tambahkan baris ini:
-    const cf = document.getElementById('calFrame');
-    if (cf) cf.src = url;
-
-    document.getElementById('detailModal').classList.remove('open');
+    const src = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calId)}&ctz=Asia%2FJakarta&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
+    document.getElementById('calFrame').src = src;
     document.getElementById('calModal').classList.add('open');
-
-
+}
 function closeCalModal() {
     document.getElementById('calModal')?.classList.remove('open');
     const cf = document.getElementById('calFrame');
     if (cf) cf.src = '';
-    
-    // Buka kembali detail modal
-    document.getElementById('detailModal')?.classList.add('open');
 }
 
 /* ── FAQ TOGGLE ── */
