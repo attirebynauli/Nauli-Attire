@@ -363,6 +363,9 @@ function openCal(key) {
 
     window.open(url, '_blank');
 }
+    // ✅ Tambahkan baris ini:
+    const cf = document.getElementById('calFrame');
+    if (cf) cf.src = url;
 
     document.getElementById('detailModal').classList.remove('open');
     document.getElementById('calModal').classList.add('open');
