@@ -357,15 +357,15 @@ function makeCalKey(series, colorName) {
 function openCal(key) {
     const calId = KALENDER_MAP[key];
     if (!calId) return;
-    
-    const src = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calId)}&ctz=Asia%2FJakarta&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
-    document.getElementById('calFrame').src = src;
-    
-    // Sembunyikan detail modal dulu
+
+    const url = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calId)}&ctz=Asia%2FJakarta&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
+
+    const link = document.getElementById('calLink');
+    if (link) link.href = url;
+
     document.getElementById('detailModal').classList.remove('open');
-    
     document.getElementById('calModal').classList.add('open');
-}
+}}
 
 function closeCalModal() {
     document.getElementById('calModal')?.classList.remove('open');
