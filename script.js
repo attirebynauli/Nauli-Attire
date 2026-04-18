@@ -354,18 +354,20 @@ function makeCalKey(series, colorName) {
     return (series.replace(/\s*series\s*/i, '').trim() + '-' + colorName)
         .toLowerCase().replace(/\s+/g, '-');
 }
+
 function openCal(key) {
     const calId = KALENDER_MAP[key];
     if (!calId) return;
 
     const url = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calId)}&ctz=Asia%2FJakarta&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
 
-    const link = document.getElementById('calLink');
-    if (link) link.href = url;
+    // ✅ Tambahkan baris ini:
+    const cf = document.getElementById('calFrame');
+    if (cf) cf.src = url;
 
     document.getElementById('detailModal').classList.remove('open');
     document.getElementById('calModal').classList.add('open');
-}}
+}
 
 function closeCalModal() {
     document.getElementById('calModal')?.classList.remove('open');
