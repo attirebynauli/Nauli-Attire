@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Katalog Kebaya – Nauli Attire Sukabumi</title>
+    <meta name="description" content="Katalog lengkap sewa kebaya Nauli Attire Sukabumi: 6 series, 23 warna full payet. Filter per series, warna dan harga, lalu cek tanggal.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Katalog Kebaya – Nauli Attire">
+    <meta property="og:description" content="Sewa kebaya premium di Kota Sukabumi. Koleksi terbaru: Alanya Burgundy, Alanya Rose Pink & Edita Blush Pink (2).">
+    <meta property="og:image" content="https://nauli-attire.vercel.app/image/nauli-attire.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/180x180.png">
+</head>
+<body class="page-katalog">
+
+
+<!-- HEADER -->
+<header class="hdr">
+    <div class="grid">
+        <a href="index.html" class="logo">Nauli Attire</a>
+        <p class="hdr-tag t-xs">Sewa Kebaya Premium<br>Full Payet / Sukabumi</p>
+        <nav class="hdr-nav" aria-label="Utama">
+            <a class="t-xs" data-n="01" href="index.html#baru">Koleksi Baru</a>
+            <a class="t-xs is-active" data-n="02" href="katalog.html" aria-current="page">Katalog</a>
+            <a class="t-xs" data-n="03" href="index.html#cara-sewa">Cara Sewa</a>
+            <a class="t-xs" data-n="04" href="index.html#kontak">Booking</a>
+        </nav>
+        <a class="hdr-cta t-xs" href="https://wa.me/6287777812020" target="_blank" rel="noopener">Booking (WA) ↗</a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu</button>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mnav" id="mnav" aria-label="Menu">
+    <div class="mnav-top"><span class="logo">Nauli Attire</span><button class="t-xs" id="menuClose">Tutup</button></div>
+    <ul>
+        <li><a href="index.html"><span>01</span>Beranda</a></li>
+        <li><a href="katalog.html"><span>02</span>Katalog</a></li>
+        <li><a href="index.html#cara-sewa"><span>03</span>Cara Sewa</a></li>
+        <li><a href="index.html#layanan"><span>04</span>Harga</a></li>
+        <li><a href="index.html#syarat"><span>05</span>S&amp;K</a></li>
+        <li><a href="index.html#kontak"><span>06</span>Booking</a></li>
+    </ul>
+    <div class="mnav-foot t-xs"><a href="https://instagram.com/attirebynauli_" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/6287777812020" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+</div>
+
+<main id="top">
+<!-- HERO KATALOG -->
+<section class="k-hero">
+    <div class="grid">
+        <nav class="k-crumb t-xs" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Katalog</span></nav>
+        <h1 class="k-title split">Katalog</h1>
+        <sup class="k-sup t-xs">(<span data-count="all">23</span>)</sup>
+        <p class="k-intro mid rv">Semua kebaya Nauli Attire dalam satu halaman — pilih series, warna dan harga, lalu cek tanggal langsung.</p>
+        <dl class="k-facts t-xs rv">
+            <div><dt>Series</dt><dd>06</dd></div>
+            <div><dt>Kebaya</dt><dd data-count="all">23</dd></div>
+            <div><dt>Baru</dt><dd data-count="new">03</dd></div>
+            <div><dt>Mulai</dt><dd>350K</dd></div>
+        </dl>
+    </div>
+    <div class="qs" id="quickSeries" aria-label="Pilih series"></div>
+</section>
+
+<!-- HASIL -->
+<section class="k-body" id="hasil">
+    <div class="k-layout">
+        <aside class="f-shell" id="filterShell" aria-label="Filter katalog">
+            <div class="f-scrim" data-close-sheet></div>
+            <div class="f-panel">
+                <div class="f-top"><p class="t-xs">Filter <span data-fcount></span></p><button class="t-xs" type="button" data-close-sheet>Tutup ✕</button></div>
+                <div id="filters"></div>
+                <div class="f-bottom"><button class="f-apply" type="button" data-close-sheet>Lihat <span id="resCount2"></span> kebaya</button></div>
+            </div>
+        </aside>
+
+        <div class="k-main">
+            <div class="res-bar" id="resBar">
+                <p class="res-n"><span id="resCount">23</span><span class="t-xs t-mute">Kebaya</span></p>
+                <div class="res-chips" id="activeChips"></div>
+                <div class="res-ctrl">
+                    <button class="f-open t-xs" id="filterBtn" type="button" aria-expanded="false" aria-controls="filterShell">Filter <span data-fcount></span></button>
+                    <label class="sort t-xs"><span class="t-mute">Urut</span><select id="sortSel" aria-label="Urutkan"></select></label>
+                    <div class="views t-xs" id="viewBox" role="group" aria-label="Tampilan"></div>
+                </div>
+            </div>
+            <div class="results" id="results" aria-live="polite"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="k-cta">
+    <div class="grid">
+        <p class="big split">Belum menemukan yang cocok? Kami bantu pilihkan.</p>
+        <div class="k-cta-r">
+            <p class="t-xs t-mute">Kirim ukuran LD dan tanggal acara —<br>kami rekomendasikan kebaya yang tersedia.</p>
+            <a class="submit" href="https://wa.me/6287777812020?text=Halo%20Nauli%20Attire%2C%20saya%20butuh%20rekomendasi%20kebaya.%20Ukuran%20LD%3A%20...%2C%20tanggal%20acara%3A%20..." target="_blank" rel="noopener"><span>Tanya via WhatsApp</span><span>↗</span></a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="foot">
+    <div class="grid foot-cols">
+        <div><h4>Nauli Attire Directory</h4><p>Kebaya premium<br>harga affordable</p></div>
+        <div><h4>Series</h4><a href="katalog.html?series=edita">Edita</a><a href="katalog.html?series=calla">Calla</a><a href="katalog.html?series=shreya">Shreya</a><a href="katalog.html?series=aurora">Aurora</a><a href="katalog.html?series=elysian">Elysian</a><a href="katalog.html?series=alanya">Alanya</a></div>
+        <div><h4>Navigasi</h4><a href="index.html#baru">Terbaru</a><a href="katalog.html">Katalog</a><a href="index.html#layanan">Layanan</a><a href="index.html#syarat">Syarat &amp; Ketentuan</a><a href="index.html#faq">FAQ</a></div>
+        <div><h4>Sosial / Kota</h4><a href="https://instagram.com/attirebynauli_" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/6287777812020" target="_blank" rel="noopener">WhatsApp ↗</a><p class="foot-addr">Jl. Ciandam, Kp. Sudajaya<br>Cibeureum Hilir, Sukabumi 43165</p></div>
+    </div>
+    <p class="wordmark" aria-hidden="true">Nauli Attire</p>
+    <div class="foot-bot t-xs"><span>© <span data-year></span> Nauli Attire</span><a href="#top">Kembali ke atas ↑</a></div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/katalog.js"></script>
+</body>
+</html>
