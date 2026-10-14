@@ -1,0 +1,88 @@
+{
+  "redirects": [
+    {
+      "source": "/koleksi/koleksi.html",
+      "destination": "/katalog.html",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi",
+      "destination": "/katalog.html",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/edita.html",
+      "destination": "/katalog.html?series=edita",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/calla.html",
+      "destination": "/katalog.html?series=calla",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/shreya.html",
+      "destination": "/katalog.html?series=shreya",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/aurora.html",
+      "destination": "/katalog.html?series=aurora",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/elysian.html",
+      "destination": "/katalog.html?series=elysian",
+      "permanent": true
+    },
+    {
+      "source": "/koleksi/alanya.html",
+      "destination": "/katalog.html?series=alanya",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-src https://calendar.google.com https://www.google.com; frame-ancestors 'none';"
+        }
+      ]
+    },
+    {
+      "source": "/image/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}
